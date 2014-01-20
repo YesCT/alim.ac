@@ -1,3 +1,9 @@
+
+set :default_title, "alim.ac"
+
+# Pretty URLs
+activate :directory_indexes
+
 ###
 # Compass
 ###
@@ -51,6 +57,8 @@ set :js_dir, 'js'
 
 set :images_dir, 'img'
 
+set :relative_links, true
+
 # Build-specific configuration
 configure :build do
   # For example, change the Compass output style for deployment
@@ -63,7 +71,7 @@ configure :build do
   # activate :asset_hash
 
   # Use relative URLs
-  # activate :relative_assets
+  activate :relative_assets
 
   # Or use a different image path
   # set :http_prefix, "/Content/images/"

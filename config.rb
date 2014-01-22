@@ -1,5 +1,15 @@
 
+Time.zone = "Chicago"
 set :default_title, "alim.ac"
+
+# Blog
+activate :blog do |blog|
+  blog.prefix = "blog"
+  blog.default_extension = ".md"
+
+end
+
+page "blog/feed.xml", :layout => false
 
 # Pretty URLs
 activate :directory_indexes

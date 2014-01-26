@@ -1,5 +1,8 @@
 
-Time.zone = "Chicago"
+I18n.enforce_available_locales = false
+
+Time.zone = "America/Chicago"
+
 set :default_title, "alim.ac"
 
 # Blog

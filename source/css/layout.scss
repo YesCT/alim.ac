@@ -1,1 +1,14 @@
 /* Layout */
+
+$max-width: 760px;
+$padding: 20px;
+
+
+
+
+.container {
+  margin: 0 auto;
+  max-width: $max-width;
+  padding: 0 $padding;
+}
+

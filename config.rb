@@ -9,7 +9,10 @@ set :default_title, "alim.ac"
 activate :blog do |blog|
   blog.prefix = "blog"
   blog.default_extension = ".md"
-
+  blog.taglink = "/tags/:tag.html"
+  blog.tag_template = "blog/tag.html"
+  blog.paginate = true
+  blog.layout = "post"
 end
 
 page "blog/feed.xml", :layout => false

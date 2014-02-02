@@ -18,3 +18,7 @@ gem "builder", "~> 3.0.0"
 
 # Article summaries
 gem "nokogiri"
+
+# Syntax highlighting
+gem "middleman-syntax"
+gem "redcarpet"

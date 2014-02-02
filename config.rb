@@ -20,6 +20,17 @@ page "blog/feed.xml", :layout => false
 # Pretty URLs
 activate :directory_indexes
 
+# Syntax
+activate :syntax
+
+set :markdown_engine, :redcarpet
+set :markdown, :layout_engine => :erb,
+               :fenced_code_blocks => true,
+               :tables => true,
+               :autolink => true,
+               :smartypants => true,
+               :with_toc_data => true
+
 ###
 # Compass
 ###
@@ -58,7 +69,7 @@ activate :directory_indexes
 # activate :automatic_image_sizes
 
 # Reload the browser automatically whenever files change
-# activate :livereload
+activate :livereload
 
 # Methods defined in the helpers block are available in templates
 # helpers do

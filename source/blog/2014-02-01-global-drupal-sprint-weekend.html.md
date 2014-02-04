@@ -21,14 +21,14 @@ My goal was to learn more about configuration management in Drupal 8. I actually
 
 ## Local environment
 
-I had a laptop running OS X 10.8.5 and [MAMP][] 2.1.2. You will also need [git][] to be installed to run the `git clone` commands.
+I had a laptop running OS X 10.8.5 and [MAMP][] 2.1.2. You will also need [git][] to be installed to run the `git clone` commands. My notes will be helpful to someone who has gone through installing Drupal via browser, but wants to speed up or automate the process on the command line.
 
 [MAMP]: http://www.mamp.info/en/index.html
 [git]: http://git-scm.com
 
 ## Set up drush
 
-I had a previous version of drush installed (6.0-dev) and I wanted to use 7.0. I used `pear` to install, so to uninstall the existing drush:
+I had a previous version of drush installed (6.0-dev) but I wanted to use 7.0. I used `pear` to install, so to uninstall the existing drush I used:
 
 ``` shell
 sudo pear uninstall drush/drush
@@ -170,8 +170,6 @@ function drupal-clean() {
 
 Even if you have more than two versions of PHP only two will be shown in MAMP preferences. To choose a version that isn't displayed in MAMP preferences, temporarily rename or move the other versions out of the `/Applications/MAMP/bin/php/` directory.
 
-I think MAMP is a great tool to start with when setting up a local development environment. I built my first Drupal site in 2011 on top of MAMP. I was amazed that with a few clicks I had a working environment with Apache, PHP, and MySQL right there on my desktop.
-
-In the future I will be exploring setting up a [Vagrant][] box as a local environment for Drupal, so that I can approximate the production environment better.
+I think MAMP is a great tool to start with when setting up a local development environment. In the future I will be exploring setting up a [Vagrant][] box as a local environment for Drupal, so that I can more closely approximate the production environment.
 
 [Vagrant]: http://www.vagrantup.com

@@ -1,5 +1,6 @@
 ---
 title: Global Drupal Sprint Weekend
+alias: blog/2014/02/01/global-drupal-sprint-weekend/
 date: 2014-02-01 22:25 CST
 tags: drupal, community
 ---

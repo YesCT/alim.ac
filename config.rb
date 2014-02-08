@@ -13,6 +13,7 @@ activate :blog do |blog|
   blog.tag_template = "blog/tag.html"
   blog.paginate = true
   blog.layout = "post"
+  blog.permalink = "/:title.html"
 end
 
 page "blog/feed.xml", :layout => false
@@ -103,3 +104,6 @@ configure :build do
   # Or use a different image path
   # set :http_prefix, "/Content/images/"
 end
+
+# Aliases: has to be activated last
+activate :alias

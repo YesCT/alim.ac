@@ -22,3 +22,6 @@ gem "nokogiri"
 # Syntax highlighting
 gem "middleman-syntax"
 gem "redcarpet"
+
+# Aliases
+gem 'middleman-alias'

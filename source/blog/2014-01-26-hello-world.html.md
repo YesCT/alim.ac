@@ -1,5 +1,6 @@
 ---
 title: Hello, world
+alias : blog/2014/01/26/hello-world/ 
 date: 2014-01-26 16:49 CST
 tags: middleman, blogging
 ---

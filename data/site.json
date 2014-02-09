@@ -1,5 +1,10 @@
 {
   "name" : "alim.ac",
+  "link" : "http://alim.ac",
+  "author" : {
+        "name" : "Alina Mackenzie",
+        "twitter" : "@alimachinations"
+  },
   "ga_tag" : "UA-47875058-1",
   "navigation" : [ 
     { 

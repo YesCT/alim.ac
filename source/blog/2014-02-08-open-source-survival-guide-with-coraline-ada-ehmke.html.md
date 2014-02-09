@@ -5,8 +5,9 @@ tags: open source, contributing, community
 ---
 
 Yesterday I attended a talk by [Coraline Ada Ehmke][] titled _The Open Source 
-Survival Guide_. The talk was hosted by the Chicago chapter of [Girl Develop It][].
+Survival Guide_. 
 READMORE 
+The talk was hosted by the Chicago chapter of [Girl Develop It][].
 This is a rough outline of notes that I took during the talk. My reflections are 
 below the outline.
 
@@ -189,4 +190,4 @@ advanced for me, and having likely overwhelmed others in a similar way.
 Allow for others (and yourself!) to go at own pace from exploration and
 deconstruction (of projects and concepts) toward contribution. 
 
-To all the mentors in my life, a deep thank you.
+To all the mentors in my life, a big thank you.

@@ -3,8 +3,6 @@ I18n.enforce_available_locales = false
 
 Time.zone = "America/Chicago"
 
-set :default_title, "alim.ac"
-set :site_name, "alim.ac"
 set :ga_tag, "UA-XXXXXXXX"
 
 # Blog

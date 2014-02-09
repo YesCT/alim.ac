@@ -1,0 +1,16 @@
+{
+  "name" : "alim.ac",
+  "ga_tag" : "UA-47875058-1",
+  "navigation" : [ 
+    { 
+        "icon" : "fa fa-pencil", 
+        "text" : "Blog",
+        "link" : "/blog.html"
+    },
+    {
+        "icon" : "fa fa-comment",
+        "text" : "About",
+        "link" : "/about.html"
+    }
+  ]  
+}

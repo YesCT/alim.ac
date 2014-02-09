@@ -1,0 +1,9 @@
+<nav>
+  <ul>
+<% data.site.navigation.each do |n| %>
+     <li>
+       <i class="<%= n.icon %>"></i> <%= link_to n.text, n.link %> 
+     </li>
+<% end %>
+   </ul>
+ </nav>

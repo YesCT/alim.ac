@@ -17,5 +17,22 @@
         "text" : "About",
         "link" : "/about.html"
     }
+  ],
+ "social" : [
+    {
+        "icon" : "fa fa-twitter",
+        "text" : "Twitter",
+        "link" : "https://twitter.com/alimachinations"
+    },
+    {
+        "icon" : "fa fa-github",
+        "text" : "Github",
+        "link" : "https://github.com/alimac"
+    },
+    {
+        "icon" : "fa fa-rss",
+        "text" : "Feed",
+        "link" : "/feed.xml"
+    }
   ]  
 }

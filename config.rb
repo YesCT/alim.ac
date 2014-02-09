@@ -16,7 +16,7 @@ activate :blog do |blog|
   blog.permalink = "/:title.html"
 end
 
-page "blog/feed.xml", :layout => false
+page "/feed.xml", :layout => false
 
 # Pretty URLs
 activate :directory_indexes

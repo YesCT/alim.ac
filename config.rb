@@ -4,6 +4,8 @@ I18n.enforce_available_locales = false
 Time.zone = "America/Chicago"
 
 set :default_title, "alim.ac"
+set :site_name, "alim.ac"
+set :ga_tag, "UA-XXXXXXXX"
 
 # Blog
 activate :blog do |blog|
@@ -100,6 +102,9 @@ configure :build do
 
   # Use relative URLs
   activate :relative_assets
+
+  # Google Analytics
+  set :ga_tag, "UA-47875058-1"
 
   # Or use a different image path
   # set :http_prefix, "/Content/images/"

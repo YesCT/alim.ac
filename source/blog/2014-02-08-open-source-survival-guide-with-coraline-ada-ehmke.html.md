@@ -12,9 +12,8 @@ my first time at this meetup and I'm glad that I beat the five o'clock
 "I just want to go home" feeling, as well as Chiberian weather to attend.
 
 This is a rough outline of notes that I took during the talk and my thoughts
-at the end of the post.
-
-One day maybe I will master the dark art of livetweeting at events.
+at the end of the post. One day maybe I will master the dark art of 
+livetweeting at events.
 
 [Coraline Ada Ehmke]: http://bantik.github.io
 [Girl Develop It]: http://www.meetup.com/Girl-Develop-It-Chicago-IL

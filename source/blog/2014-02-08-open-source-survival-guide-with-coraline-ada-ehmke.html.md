@@ -7,11 +7,14 @@ tags: open source, contributing, community
 Yesterday I attended a talk by [Coraline Ada Ehmke][] titled _The Open Source 
 Survival Guide_. 
 READMORE 
-The talk was hosted by the Chicago chapter of [Girl Develop It][].
-This is a rough outline of notes that I took during the talk. My reflections are 
-below the outline.
+The talk was hosted by the Chicago chapter of [Girl Develop It][]. It was
+my first time at this meetup and I'm glad that I beat the five o'clock
+"I just want to go home" feeling, as well as Chiberian weather to attend.
 
-Perhaps one day I will master the dark art of livetweeting.
+This is a rough outline of notes that I took during the talk and my thoughts
+at the end of the post.
+
+One day maybe I will master the dark art of livetweeting at events.
 
 [Coraline Ada Ehmke]: http://bantik.github.io
 [Girl Develop It]: http://www.meetup.com/Girl-Develop-It-Chicago-IL
@@ -168,14 +171,15 @@ way to increase women's participation in open source.
 ### On contributing
 
 A picture is worth a thousand words, but good documentation is worth a
-thousand _lines_ of code. Especially documentation for getting started with
+thousand lines of code. Especially documentation for getting started with
 a particular tool. Documentation is a process. Helping write and rewrite
 documentation is a great way to get started with contributing to open source.
 
 In the Drupal community there have been several initiatives to make
 contributing an easier process for [novice contributors][]. One such initiative
-is [Drupal Ladder][], another is [tagging issues][] with _Novice_ to help
-identify tasks suitable for folks who are just getting started.
+is [Drupal Ladder][]. Another is [tagging issues][] with _Novice_. This helps 
+identify tasks suitable for folks who are just getting started, and make it
+obvious that novices are welcome.
 
 [novice contributors]: https://drupal.org/novice
 [Drupal Ladder]: http://drupalladder.org
@@ -183,11 +187,9 @@ identify tasks suitable for folks who are just getting started.
 
 ### On mentoring
 
-Pacing is important. Be mindful of "mentoring bandwidth". I've been on both ends 
-of information overload, having been overwhelmed with tasks that were too 
-advanced for me, and having likely overwhelmed others in a similar way.
-
 Allow for others (and yourself!) to go at own pace from exploration and
-deconstruction (of projects and concepts) toward contribution. 
+deconstruction (of projects and concepts) toward contribution.
+Pacing is important. Be mindful of bandwidth, it's easy to overwhelm yourself 
+and others. Sometimes the process can take a while. 
 
-To all the mentors in my life, a big thank you.
+With that in mind, a big thank you to all the mentors. 

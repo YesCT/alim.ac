@@ -6,10 +6,9 @@
         <i class="fa fa-calendar"></i>
         <%= current_article.date.strftime('%Y-%m-%d') %>
         <div class="tags">
-          tags:
           <% current_article.tags.sort.each_with_index do |tag, i| %>
             <% last = (i == current_article.tags.size - 1) %>
-            <%= link_to tag, tag_path(tag) %><%= "," unless last  %>
+            <%= link_to "<i class=\"fa fa-tag\"></i> #{tag}", tag_path(tag) %>
           <% end %>
         </div>
       </div>

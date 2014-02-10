@@ -1,4 +1,3 @@
-/* Layout */
 
 $max-width: 760px;
 $padding: 20px;
@@ -8,6 +7,17 @@ $padding: 20px;
   max-width: $max-width;
   padding: 0 $padding;
 }
+
+.tags,
 .highlight {
-  padding: 0 $padding;
+  padding: 15px;
+}
+
+pre {
+  margin: $padding 0;
+}
+
+a:hover {
+  color: red;
+  text-decoration: none;
 }

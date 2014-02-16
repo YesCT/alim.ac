@@ -1,11 +1,17 @@
 ---
-title: About 
+title: About me 
 ---
 
-<h2>About me</h2>
+<h1>About me</h1>
+<p class="lead">
+  Hi, I'm Alina and I'm a web developer. 
+</p>
+
+<div class="row">
+  <div class="col-sm-8 blog-main">
 
 <p>
-  Hi, I'm Alina and I'm a web developer. My first programming language 
+  My first programming language 
   was Perl and I still use it quite a bit. My interests run the gamut 
   from UX to devops. I work with Drupal, WordPress and all kinds of 
   custom web applications.
@@ -18,8 +24,8 @@ title: About
   Spanish and I'm currently learning Japanese.
 </p>
 
-<p>
-  <strong>alim.ac</strong> is a <a href="/blog/hello-world/">side project</a> 
-  and is very much a work in progress in terms of layout, design and content.
-  <i class="fa fa-smile-o"></i>
-</p>
+  </div>
+  <div class="col-sm-3 col-sm-offset-1">
+    <%= partial "partials/alimac" %>
+  </div>
+</div>

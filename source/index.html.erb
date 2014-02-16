@@ -1,4 +1,26 @@
 ---
 ---
 
-<p>Hello, world! </p>
+<div class="blog-header">
+  <h1 class="blog-title">Latest posts</h1>
+  <p class="lead blog-description">
+    Dispatches from my machinations
+  </p>  
+</div>
+
+<div class="row">
+  <div class="col-sm-8 blog-main">
+
+<% blog.articles[0...3].each do |article| %>
+    <h2>
+      <%= link_to article.title, article %> 
+      <small><%= article.date.strftime('%b %e') %></small>
+    </h2>
+    <%= article.summary %>
+<% end %>
+
+</div>
+
+  <div class="col-sm-3 col-sm-offset-1">
+  </div>
+</div>

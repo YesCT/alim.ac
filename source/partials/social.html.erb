@@ -1,7 +1,5 @@
-<nav>
-  <ul class="social-nav">
+<ul class="nav navbar-nav social-nav">
 <% data.site.social.each do |s| %>
-     <li> <%= link_to "<i class=\"#{s.icon}\"></i> #{s.text}", s.link %> </li>
+  <li> <%= link_to "<i class=\"#{s.icon}\"></i> #{s.text}", s.link %> </li>
 <% end %>
-  </ul>
-</nav>
+</ul>

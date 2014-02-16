@@ -1,20 +1,33 @@
 
-$max-width: 760px;
 $padding: 20px;
+$footer-height: 52px;
+
+html {
+  position: relative;
+  min-height: 100%;
+}
 
 body {
   font-size: 16px;
+  margin-bottom: $footer-height *2;
 }
 
-.container {
-  margin: 0 auto;
-  max-width: $max-width;
-  padding: 0 $padding;
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: $footer-height;
+
+  .navbar {
+    margin-bottom: 0;
+  }
 }
 
-.tags,
-.highlight {
-  padding: 15px;
+.tags {
+  margin: 15px 0;
+  a {
+    margin-right: 10px;
+  }   
 }
 
 pre {
@@ -25,3 +38,5 @@ a:hover {
   color: red;
   text-decoration: none;
 }
+
+

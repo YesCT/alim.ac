@@ -2,15 +2,15 @@
   <article>
     <h1><%= current_article.title %></h1>
     <div class="article-details">
-      <div class="article-date">
+      <p class="lead">
         <i class="fa fa-calendar"></i>
-        <%= current_article.date.strftime('%Y-%m-%d') %>
-        <div class="tags">
-          <% current_article.tags.sort.each_with_index do |tag, i| %>
-            <% last = (i == current_article.tags.size - 1) %>
-            <%= link_to "<i class=\"fa fa-tag\"></i> #{tag}", tag_path(tag) %>
-          <% end %>
-        </div>
+        <%= current_article.date.strftime('%A, %B %e, %Y') %>
+      </p>
+      <div class="tags">
+        <% current_article.tags.sort.each_with_index do |tag, i| %>
+          <% last = (i == current_article.tags.size - 1) %>
+          <%= link_to "<i class=\"fa fa-tag\"></i> #{tag}", tag_path(tag) %>
+        <% end %>
       </div>
     </div>
     <%= yield %>

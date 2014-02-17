@@ -21,7 +21,10 @@ gem "nokogiri"
 
 # Syntax highlighting
 gem "middleman-syntax"
-gem "redcarpet"
+
+# Markdown
+#gem "redcarpet", github: "vmg/redcarpet"
+gem "kramdown"
 
 # Aliases
-gem 'middleman-alias'
+gem "middleman-alias"

@@ -18,7 +18,7 @@ livetweeting at events.
 [Coraline Ada Ehmke]: http://bantik.github.io
 [Girl Develop It]: http://www.meetup.com/Girl-Develop-It-Chicago-IL
 
-## Open Source Survival Guide
+## Open Source Survival Guide 
 
 ### Core values as a developer
 
@@ -90,6 +90,7 @@ A chart of participation of women in open source software:
 |------|--------------------------------:|
 | 1842 |                            100% |
 | 2014 |                              2% |
+{: .table .table-bordered .autowidth}
 
 Open source culture is often hostile to newbies.
 

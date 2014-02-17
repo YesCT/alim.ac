@@ -39,4 +39,21 @@ a:hover {
   text-decoration: none;
 }
 
+table {
+  margin: 25px 0;    
+}
 
+.autowidth {
+  width: auto;
+}
+
+
+/*
+ * Override Bootstrap's default container.
+ */
+
+@media (min-width: 1200px) {
+  .container {
+    width: 970px;
+  }
+}

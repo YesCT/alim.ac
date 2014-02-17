@@ -89,7 +89,6 @@ GEM
       ffi (>= 0.5.0)
     rb-kqueue (0.2.0)
       ffi (>= 0.5.0)
-    redcarpet (3.0.0)
     rouge (1.3.2)
     sass (3.2.13)
     sprockets (2.10.1)
@@ -115,6 +114,7 @@ PLATFORMS
 
 DEPENDENCIES
   builder (~> 3.0.0)
+  kramdown
   middleman (~> 3.2.1)
   middleman-alias
   middleman-blog (~> 3.2.0)
@@ -122,4 +122,3 @@ DEPENDENCIES
   middleman-livereload (~> 3.1.0)
   middleman-syntax
   nokogiri
-  redcarpet

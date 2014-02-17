@@ -42,9 +42,9 @@ wants to speed up or automate the process on the command line.
 I had a previous version of drush installed (6.0-dev) but I wanted to use 7.0. 
 I used `pear` to install, so to uninstall the existing drush I used:
 
-``` shell
+~~~ shell
 sudo pear uninstall drush/drush
-```
+~~~
 
 Instead of using a package manager, I wanted to run drush directly from a local 
 git repository. This would allow me to use different versions of drush easily, 
@@ -53,46 +53,46 @@ just by switching to a different branch.
 First, create a `~/bin/` directory. Next, clone the drush repository within 
 `~/bin/`:
 
-``` shell
+~~~ shell
 git clone https://github.com/drush-ops/drush.git
-```
+~~~
 
 Finally, update `.bash_login` (or `.profile` or `.bash_profile`) to add the 
 following two lines:
 
-``` shell
+~~~ shell
 export PATH="~/bin:$PATH" 
 alias drush="~/bin/drush/drush"
-```
+~~~
 
 The first allows me to execute scripts located in my `~/bin/` directory. 
 The second adds an alias to the drush executable. I reloaded my shell:
 
-```shell
+~~~shell
 . ~/.bash_login 
-```
+~~~
 
 and now I was ready to use drush:
 
-``` shell
+~~~ shell
 drush --version
  Drush Version   :  7.0-dev
-```
+~~~
 
 There are just two [additional configuration steps][] to make drush work with 
 MAMP. Specify which version of PHP will be used by drush. I added the following 
 to `.bash_login`:
 
-``` shell
+~~~ shell
 export PATH="/Applications/MAMP/Library/bin:/Applications/MAMP/bin/php5.4/bin:$PATH"
-```
+~~~
 
 Create a symbolic link to MAMP's MySQL socket file:
 
-``` shell
+~~~ shell
 sudo mkdir /var/mysql
 sudo ln -s /Applications/MAMP/tmp/mysql/mysql.sock /var/mysql/mysql.sock
-```
+~~~
 
 [additional configuration steps]: https://github.com/drush-ops/drush#additional-configurations-for-mamp
 
@@ -100,26 +100,26 @@ sudo ln -s /Applications/MAMP/tmp/mysql/mysql.sock /var/mysql/mysql.sock
 
 Get a copy of Drupal 8:
 
-``` shell
+~~~ shell
 git clone --branch 8.x http://git.drupal.org/project/drupal.git
-```
+~~~
 
 To install Drupal, use `drush site-install` or the shorthand `drush si`. 
 First I tried it with an existing (but empty) MySQL database and user (both 
 named `drupal`):
 
-``` shell
+~~~ shell
 drush si --account-pass=admin --db-url=mysql://drupal:drupal@localhost/drupal -y
-```
+~~~
 
 Afterward I opened <http://localhost/drupal> in the browser to confirm that 
 the installation was successful. 
 
 Next, I tried it with root MySQL credentials and created a database on the fly:
 
-``` shell
+~~~ shell
 drush si --account-pass=admin --db-url=mysql://root:root@localhost/mydb -y
-```
+~~~
 
 One thing I wanted to do is to use root MySQL credentials to create the new 
 database, but also create a MySQL user that is granted rights only to that 
@@ -132,21 +132,21 @@ done with drush, though.
 Cleaning up, or "resetting" the site involves more than one command. First, 
 remove existing database:
 
-``` shell    
+~~~ shell    
 drush sql-drop -y
-```
+~~~
 
 Next, remove existing installation:
 
-``` shell    
+~~~ shell    
 sudo rm -rf sites/default
-```
+~~~
    
 Finally, restore the sites/default/default.settings.php file:
 
-``` shell
+~~~ shell
 sudo git checkout -- sites/default
-```
+~~~
 
 ## Script it all up
 
@@ -157,14 +157,14 @@ Copy and save each in the `~/bin/` directory, as `drupal-install` and
 
 Then, add the following to your shell profile:
 
-``` shell
+~~~ shell
 source ~/bin/drupal-install
 source ~/bin/drupal-clean
-```
+~~~
 
 ### drupal-install
 
-``` shell
+~~~ shell
 function drupal-install() {
 	# If you run this command with an argument, it will be the name of the DB
 	if [ $1 ] ; then
@@ -173,11 +173,11 @@ function drupal-install() {
 		drush si --account-pass=admin --db-url=mysql://root:root@localhost/d8 -y
 	fi
 }
-```
+~~~
 
 ### drupal-clean
 
-``` shell
+~~~ shell
 function drupal-clean() {
 	# Remove existing database
 	drush sql-drop -y;
@@ -194,7 +194,7 @@ function drupal-clean() {
 	# But still ensure that we own the folder
 	sudo chown -R `whoami` sites/default;
 }
-```
+~~~
 
 ## Other things I learned
 

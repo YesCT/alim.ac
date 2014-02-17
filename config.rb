@@ -25,7 +25,8 @@ activate :directory_indexes
 # Syntax
 activate :syntax
 
-set :markdown_engine, :redcarpet
+set :markdown_engine, :kramdown
+#set :markdown_engine, :redcarpet
 set :markdown, :layout_engine => :erb,
                :fenced_code_blocks => true,
                :tables => true,

@@ -7,10 +7,10 @@ set :ga_tag, "UA-XXXXXXXX"
 
 # Blog
 activate :blog do |blog|
-  blog.prefix = "blog"
+  blog.prefix = "writes"
   blog.default_extension = ".md"
   blog.taglink = "/tags/:tag.html"
-  blog.tag_template = "blog/tag.html"
+  blog.tag_template = "writes/tag.html"
   blog.paginate = true
   blog.layout = "post"
   blog.permalink = "/:title.html"

@@ -1,7 +1,10 @@
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700,800,600,300);
+//@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700,800,600,300);
+@import url(http://fonts.googleapis.com/css?family=Droid+Sans);
+@import url(http://fonts.googleapis.com/css?family=Roboto+Condensed:300italic,400italic,700italic,400,700,300);
 
 $padding: 20px;
 $footer-height: 52px;
+$main-color: #00A3CC;
 
 html {
   position: relative;
@@ -10,11 +13,23 @@ html {
 
 body {
   font-size: 16px;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Droid Sans', sans-serif;
   margin-bottom: $footer-height *2;
 }
 
+.navbar {
+  border: 0;
+  background-color: $main-color;
+  color: #fff;
+}
+
+.navbar-default .navbar-brand,
+.navbar-default .navbar-nav>li>a {
+  color: #fff;
+}
+
 h1,h2,h3,h4,h5,h6 {
+  font-family: 'Roboto Condensed', sans-serif;
   font-weight: 700;
 }
 
@@ -53,8 +68,16 @@ pre {
   margin: $padding 0;
 }
 
+a {
+  color: $main-color;
+}
+
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-nav > li > a:hover {
+  color: #472400;
+}
 a:hover {
-  color: red;
+  color: #472400;
   text-decoration: none;
 }
 

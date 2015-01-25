@@ -4,35 +4,35 @@
   "link" : "http://alim.ac",
   "author" : {
         "name" : "Alina Mackenzie",
-        "twitter" : "@alimachinations"
+        "twitter" : "@czaroxiejka"
   },
   "ga_tag" : "UA-47875058-1",
   "navigation" : [ 
     { 
         "icon" : "fa fa-pencil", 
-        "text" : "Blog",
-        "link" : "/blog.html"
+        "text" : "writes",
+        "link" : "/writes.html"
     },
     {
         "icon" : "fa fa-comment",
-        "text" : "About",
+        "text" : "about",
         "link" : "/about.html"
     }
   ],
  "social" : [
     {
         "icon" : "fa fa-twitter",
-        "text" : "Twitter",
-        "link" : "https://twitter.com/alimachinations"
+        "text" : "twitter",
+        "link" : "https://twitter.com/czaroxiejka"
     },
     {
         "icon" : "fa fa-github",
-        "text" : "Github",
+        "text" : "github",
         "link" : "https://github.com/alimac"
     },
     {
         "icon" : "fa fa-rss",
-        "text" : "Feed",
+        "text" : "feed",
         "link" : "/feed.xml"
     }
   ]  

@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>alim.ac</title>
+  <id>http://alim.ac/writes</id>
+  <link href="http://alim.ac/writes"/>
+  <link href="http://alim.ac/feed.xml" rel="self"/>
+  <updated>2014-02-08T18:23:00+01:00</updated>
+  <author>
+    <name>Alina Mackenzie</name>
+  </author>
+  <entry>
+    <title>Open Source Survival Guide with Coraline Ada Ehmke</title>
+    <link rel="alternate" href="http://alim.ac/writes/open-source-survival-guide-with-coraline-ada-ehmke/"/>
+    <id>http://alim.ac/writes/open-source-survival-guide-with-coraline-ada-ehmke/</id>
+    <published>2014-02-08T18:23:00+01:00</published>
+    <updated>2015-04-15T22:31:21+02:00</updated>
+    <author>
+      <name>Alina Mackenzie</name>
+    </author>
+    <content type="html">&lt;p&gt;Yesterday I attended a talk by &lt;a href="http://bantik.github.io"&gt;Coraline Ada Ehmke&lt;/a&gt; titled &lt;em&gt;The Open Source 
+Survival Guide&lt;/em&gt;. 
+ 
+The talk was hosted by the Chicago chapter of &lt;a href="http://www.meetup.com/Girl-Develop-It-Chicago-IL"&gt;Girl Develop It&lt;/a&gt;. It was
+my first time at this meetup and I’m glad that I beat the five o’clock
+“I just want to go home” feeling, as well as Chiberian weather to attend.&lt;/p&gt;
+
+&lt;p&gt;This is a rough outline of notes that I took during the talk and my thoughts
+at the end of the post. One day maybe I will master the dark art of 
+livetweeting at events.&lt;/p&gt;
+
+&lt;h2 id="open-source-survival-guide"&gt;Open Source Survival Guide&lt;/h2&gt;
+
+&lt;h3 id="core-values-as-a-developer"&gt;Core values as a developer&lt;/h3&gt;
+
+&lt;h4 id="get-better-at-what-i-do"&gt;Get better at what I do&lt;/h4&gt;
+
+&lt;p&gt;Stuff that I do:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Stuff I have done in the past&lt;/li&gt;
+  &lt;li&gt;Stuff that I do every day (reinforcement of vocabulary)&lt;/li&gt;
+  &lt;li&gt;Stuff that I want to do (experimenting and taking challenges)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Retain, practice, and find new things.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Code is the new literacy.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;You can learn from good code and bad code.&lt;/p&gt;
+
+&lt;h4 id="build-useful-stuff"&gt;Build useful stuff&lt;/h4&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;The worst developer I ever met was me, six months ago.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Open source projects gain focus over time.&lt;/p&gt;
+
+&lt;p&gt;Building useful stuff:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;takes a combination of practice learning&lt;/li&gt;
+  &lt;li&gt;going outside of comfort zone&lt;/li&gt;
+  &lt;li&gt;learning and teaching moments&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Design communicates intent - others can fill in the blanks.&lt;/p&gt;
+
+&lt;h4 id="practice-good-citizenship"&gt;Practice good citizenship&lt;/h4&gt;
+
+&lt;p&gt;Through:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;mentoring&lt;/li&gt;
+  &lt;li&gt;speaking&lt;/li&gt;
+  &lt;li&gt;teaching&lt;/li&gt;
+  &lt;li&gt;contributing to open source&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id="open-source"&gt;Open source&lt;/h3&gt;
+
+&lt;p&gt;Open source is software written for the common good that you can read 
+and modify.&lt;/p&gt;
+
+&lt;p&gt;Tragedy of the commons, the idea that individuals acting in self interest 
+is not in community’s long term best interest. Depletes common resource.
+Open source is the new commons, but an infinite resource.&lt;/p&gt;
+
+&lt;p&gt;The new tragedy is access.&lt;/p&gt;
+
+&lt;p&gt;Core values of open source:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;transparency&lt;/li&gt;
+  &lt;li&gt;shared ownership&lt;/li&gt;
+  &lt;li&gt;“meritocracy” (and the &lt;a href="https://twitter.com/defunkt/statuses/426104782894284800"&gt;infamous rug&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Culture is not a ping pong table in the kitchen, it’s an expression of 
+shared values. Some cultures are toxic (brogrammers).&lt;/p&gt;
+
+&lt;p&gt;Open source needs diversity and different voices.&lt;/p&gt;
+
+&lt;p&gt;Ada Byron Lovelace, the first programmer, published the source code 
+of her programs.&lt;/p&gt;
+
+&lt;p&gt;A chart of participation of women in open source software:&lt;/p&gt;
+
+&lt;table class="table table-bordered autowidth"&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Year&lt;/th&gt;
+      &lt;th style="text-align: right"&gt;Percent of women in open source&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;1842&lt;/td&gt;
+      &lt;td style="text-align: right"&gt;100%&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;2014&lt;/td&gt;
+      &lt;td style="text-align: right"&gt;2%&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Open source culture is often hostile to newbies.&lt;/p&gt;
+
+&lt;h3 id="changing-the-culture"&gt;Changing the culture&lt;/h3&gt;
+
+&lt;p&gt;Call out bad behavior. Advice from Ashe Dryden: don’t talk about the person, 
+talk about what they did: “That was not cool.” If they respond, take it to email.&lt;/p&gt;
+
+&lt;p&gt;Set a good example.&lt;/p&gt;
+
+&lt;p&gt;Find a way to get paid to do open source software.&lt;/p&gt;
+
+&lt;p&gt;Get better at what you do:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href="http://exercism.io"&gt;exercism.io&lt;/a&gt; Write code to pass tests, get get feedback, give feedback 
+to others.&lt;/li&gt;
+  &lt;li&gt;Believe in yourself.&lt;/li&gt;
+  &lt;li&gt;Maintain a discipline of contributing&lt;/li&gt;
+  &lt;li&gt;Pair up: &lt;a href="http://pairprogramwith.me"&gt;pairprogramwith.me&lt;/a&gt; has pair programming resources and tools.&lt;/li&gt;
+  &lt;li&gt;Most importantly, &lt;strong&gt;don’t go it alone&lt;/strong&gt;. Find a mentor, guide, role model.&lt;/li&gt;
+  &lt;li&gt;Build a support network&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;And learn all the things.&lt;/p&gt;
+
+&lt;h2 id="contributing-effectively"&gt;Contributing effectively&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;em&gt;Be a fixer&lt;/em&gt;. Look at issues and fix bugs.&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Be a scribe&lt;/em&gt;. Update or write documentation. Many projects suffer from
+lack or outdated documentation.&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Build a reputation over time&lt;/em&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Don’t be shy about putting your name on the work you do.&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Dont do too much at once.&lt;/em&gt;.&lt;/li&gt;
+  &lt;li&gt;Don’t &lt;em&gt;overcommit&lt;/em&gt; (make big changes) or &lt;em&gt;over commit&lt;/em&gt; (too many changes).&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Don’t be anonymous&lt;/em&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Projects are increasing adopting contributor code of conduct:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href="http://angularjs.org"&gt;AngularJS&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="http://brew.sh"&gt;Homebrew&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href="http://www.opensourceforwomen.org"&gt;opensourceforwomen.org&lt;/a&gt; aims to be a resource for connecting all women 
+of all skill levels to open source projects.&lt;/p&gt;
+
+&lt;p&gt;Use google hangouts and IRC.&lt;/p&gt;
+
+&lt;p&gt;Support other people via &lt;a href="https://www.gittip.com"&gt;gittip&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;We can do this.&lt;/p&gt;
+
+&lt;p&gt;Questions?&lt;/p&gt;
+
+&lt;p&gt;In an answer to “What is the best programming language to get started with?”:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Ruby: designed to make programmers happy.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id="my-thoughts"&gt;My thoughts&lt;/h2&gt;
+
+&lt;h3 id="on-women-in-open-source"&gt;On women in open source&lt;/h3&gt;
+
+&lt;p&gt;Conferences and meetups are spaces where a lot of what Coraline mentioned 
+(experimenting, taking on challenges, teaching and learning) takes place.
+Providing childcare at conferences (like &lt;a href="https://us.pycon.org/2014/childcare/"&gt;PyCon 2014&lt;/a&gt;) or hosting events
+at which kids can either participate or have space to play is another
+way to increase women’s participation in open source.&lt;/p&gt;
+
+&lt;h3 id="on-contributing"&gt;On contributing&lt;/h3&gt;
+
+&lt;p&gt;A picture is worth a thousand words, but good documentation is worth a
+thousand lines of code. Especially documentation for getting started with
+a particular tool. Documentation is a process. Helping write and rewrite
+documentation is a great way to get started with contributing to open source.&lt;/p&gt;
+
+&lt;p&gt;In the Drupal community there have been several initiatives to make
+contributing an easier process for &lt;a href="https://drupal.org/novice"&gt;novice contributors&lt;/a&gt;. One such initiative
+is &lt;a href="http://drupalladder.org"&gt;Drupal Ladder&lt;/a&gt;. Another is &lt;a href="http://webchick.net/node/96"&gt;tagging issues&lt;/a&gt; with &lt;em&gt;Novice&lt;/em&gt;. This helps 
+identify tasks suitable for folks who are just getting started, and make it
+obvious that novices are welcome.&lt;/p&gt;
+
+&lt;h3 id="on-mentoring"&gt;On mentoring&lt;/h3&gt;
+
+&lt;p&gt;Allow for others (and yourself!) to go at own pace from exploration and
+deconstruction (of projects and concepts) toward contribution.
+Pacing is important. Be mindful of bandwidth, it’s easy to overwhelm yourself 
+and others. Sometimes the process can take a while.&lt;/p&gt;
+
+&lt;p&gt;With that in mind, a big thank you to all the mentors.&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Global Drupal Sprint Weekend</title>
+    <link rel="alternate" href="http://alim.ac/writes/global-drupal-sprint-weekend/"/>
+    <id>http://alim.ac/writes/global-drupal-sprint-weekend/</id>
+    <published>2014-02-02T05:25:00+01:00</published>
+    <updated>2015-04-15T22:31:21+02:00</updated>
+    <author>
+      <name>Alina Mackenzie</name>
+    </author>
+    <content type="html">&lt;p&gt;On January 26 I participated in &lt;a href="https://groups.drupal.org/node/332998"&gt;Drupal Global Sprint Weekend&lt;/a&gt;. 
+ 
+This was my second time participating in a sprint during the Global Sprint 
+Days (check out this &lt;a href="https://www.lullabot.com/blog/podcasts/global-sprint-days"&gt;podcast with Cathy Theys&lt;/a&gt; to find out how it all got 
+started).&lt;/p&gt;
+
+&lt;p&gt;There are a few things that helped make this sprint experience even better this 
+year:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;I had a specific goal.&lt;/li&gt;
+  &lt;li&gt;I had local environment ready.&lt;/li&gt;
+  &lt;li&gt;I read &lt;a href="http://www.genuineinteractive.com/blog-posts/web/helpful-guide-first-sprint/"&gt;A Helpful Guide to Your First Drupal Sprint&lt;/a&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;My goal was to learn more about configuration management in Drupal 8. I actually 
+didn’t get to exploring configuration management, but I learned about using 
+&lt;a href="https://github.com/drush-ops/drush"&gt;drush&lt;/a&gt; for automating installation and tear-down of a Drupal site.&lt;/p&gt;
+
+&lt;h2 id="local-environment"&gt;Local environment&lt;/h2&gt;
+
+&lt;p&gt;I had a laptop running OS X 10.8.5 and &lt;a href="http://www.mamp.info/en/index.html"&gt;MAMP&lt;/a&gt; 2.1.2. You will also need 
+&lt;a href="http://git-scm.com"&gt;git&lt;/a&gt; to be installed to run the &lt;code&gt;git clone&lt;/code&gt; commands. My notes will be 
+helpful to someone who has gone through installing Drupal via browser, but 
+wants to speed up or automate the process on the command line.&lt;/p&gt;
+
+&lt;h2 id="set-up-drush"&gt;Set up drush&lt;/h2&gt;
+
+&lt;p&gt;I had a previous version of drush installed (6.0-dev) but I wanted to use 7.0. 
+I used &lt;code&gt;pear&lt;/code&gt; to install, so to uninstall the existing drush I used:&lt;/p&gt;
+
+&lt;pre class="highlight shell"&gt;&lt;code&gt;sudo pear uninstall drush/drush
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Instead of using a package manager, I wanted to run drush directly from a local 
+git repository. This would allow me to use different versions of drush easily, 
+just by switching to a different branch.&lt;/p&gt;
+
+&lt;p&gt;First, create a &lt;code&gt;~/bin/&lt;/code&gt; directory. Next, clone the drush repository within 
+&lt;code&gt;~/bin/&lt;/code&gt;:&lt;/p&gt;
+
+&lt;pre class="highlight shell"&gt;&lt;code&gt;git clone https://github.com/drush-ops/drush.git
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Finally, update &lt;code&gt;.bash_login&lt;/code&gt; (or &lt;code&gt;.profile&lt;/code&gt; or &lt;code&gt;.bash_profile&lt;/code&gt;) to add the 
+following two lines:&lt;/p&gt;
+
+&lt;pre class="highlight shell"&gt;&lt;code&gt;&lt;span class="nb"&gt;export &lt;/span&gt;&lt;span class="nv"&gt;PATH&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"~/bin:&lt;/span&gt;&lt;span class="nv"&gt;$PATH&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt; 
+&lt;span class="nb"&gt;alias &lt;/span&gt;&lt;span class="nv"&gt;drush&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"~/bin/drush/drush"&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The first allows me to execute scripts located in my &lt;code&gt;~/bin/&lt;/code&gt; directory. 
+The second adds an alias to the drush executable. I reloaded my shell:&lt;/p&gt;
+
+&lt;pre class="highlight shell"&gt;&lt;code&gt;. ~/.bash_login 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;and now I was ready to use drush:&lt;/p&gt;
+
+&lt;pre class="highlight shell"&gt;&lt;code&gt;drush --version
+ Drush Version   :  7.0-dev
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;There are just two &lt;a href="https://github.com/drush-ops/drush#additional-configurations-for-mamp"&gt;additional configuration steps&lt;/a&gt; to make drush work with 
+MAMP. Specify which version of PHP will be used by drush. I added the following 
+to &lt;code&gt;.bash_login&lt;/code&gt;:&lt;/p&gt;
+
+&lt;pre class="highlight shell"&gt;&lt;code&gt;&lt;span class="nb"&gt;export &lt;/span&gt;&lt;span class="nv"&gt;PATH&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"/Applications/MAMP/Library/bin:/Applications/MAMP/bin/php5.4/bin:&lt;/span&gt;&lt;span class="nv"&gt;$PATH&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Create a symbolic link to MAMP’s MySQL socket file:&lt;/p&gt;
+
+&lt;pre class="highlight shell"&gt;&lt;code&gt;sudo mkdir /var/mysql
+sudo ln -s /Applications/MAMP/tmp/mysql/mysql.sock /var/mysql/mysql.sock
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id="site-install-with-drush"&gt;Site install with drush&lt;/h2&gt;
+
+&lt;p&gt;Get a copy of Drupal 8:&lt;/p&gt;
+
+&lt;pre class="highlight shell"&gt;&lt;code&gt;git clone --branch 8.x http://git.drupal.org/project/drupal.git
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;To install Drupal, use &lt;code&gt;drush site-install&lt;/code&gt; or the shorthand &lt;code&gt;drush si&lt;/code&gt;. 
+First I tried it with an existing (but empty) MySQL database and user (both 
+named &lt;code&gt;drupal&lt;/code&gt;):&lt;/p&gt;
+
+&lt;pre class="highlight shell"&gt;&lt;code&gt;drush si --account-pass&lt;span class="o"&gt;=&lt;/span&gt;admin --db-url&lt;span class="o"&gt;=&lt;/span&gt;mysql://drupal:drupal@localhost/drupal -y
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Afterward I opened &lt;a href="http://localhost/drupal"&gt;http://localhost/drupal&lt;/a&gt; in the browser to confirm that 
+the installation was successful.&lt;/p&gt;
+
+&lt;p&gt;Next, I tried it with root MySQL credentials and created a database on the fly:&lt;/p&gt;
+
+&lt;pre class="highlight shell"&gt;&lt;code&gt;drush si --account-pass&lt;span class="o"&gt;=&lt;/span&gt;admin --db-url&lt;span class="o"&gt;=&lt;/span&gt;mysql://root:root@localhost/mydb -y
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;One thing I wanted to do is to use root MySQL credentials to create the new 
+database, but also create a MySQL user that is granted rights only to that 
+database. The reason why I would like to do this is to keep the sites isolated, 
+each with its own MySQL user and database. It does not look like this can be 
+done with drush, though.&lt;/p&gt;
+
+&lt;h2 id="clean-up"&gt;Clean up&lt;/h2&gt;
+
+&lt;p&gt;Cleaning up, or “resetting” the site involves more than one command. First, 
+remove existing database:&lt;/p&gt;
+
+&lt;pre class="highlight shell"&gt;&lt;code&gt;drush sql-drop -y
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Next, remove existing installation:&lt;/p&gt;
+
+&lt;pre class="highlight shell"&gt;&lt;code&gt;sudo rm -rf sites/default
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Finally, restore the sites/default/default.settings.php file:&lt;/p&gt;
+
+&lt;pre class="highlight shell"&gt;&lt;code&gt;sudo git checkout -- sites/default
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id="script-it-all-up"&gt;Script it all up&lt;/h2&gt;
+
+&lt;p&gt;After running the individual commands, it’s time to take it easy and script 
+all of these tasks. The following two scripts make install and clean-up easy. 
+Copy and save each in the &lt;code&gt;~/bin/&lt;/code&gt; directory, as &lt;code&gt;drupal-install&lt;/code&gt; and 
+&lt;code&gt;drupal-clean&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Then, add the following to your shell profile:&lt;/p&gt;
+
+&lt;pre class="highlight shell"&gt;&lt;code&gt;&lt;span class="nb"&gt;source&lt;/span&gt; ~/bin/drupal-install
+&lt;span class="nb"&gt;source&lt;/span&gt; ~/bin/drupal-clean
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id="drupal-install"&gt;drupal-install&lt;/h3&gt;
+
+&lt;pre class="highlight shell"&gt;&lt;code&gt;&lt;span class="k"&gt;function &lt;/span&gt;drupal-install&lt;span class="o"&gt;()&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+	&lt;span class="c"&gt;# If you run this command with an argument, it will be the name of the DB&lt;/span&gt;
+	&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt; &lt;span class="nv"&gt;$1&lt;/span&gt; &lt;span class="o"&gt;]&lt;/span&gt; ; &lt;span class="k"&gt;then
+		&lt;/span&gt;drush si --account-pass&lt;span class="o"&gt;=&lt;/span&gt;admin --db-url&lt;span class="o"&gt;=&lt;/span&gt;mysql://root:root@localhost/&lt;span class="nv"&gt;$1&lt;/span&gt; -y
+	&lt;span class="k"&gt;else
+		&lt;/span&gt;drush si --account-pass&lt;span class="o"&gt;=&lt;/span&gt;admin --db-url&lt;span class="o"&gt;=&lt;/span&gt;mysql://root:root@localhost/d8 -y
+	&lt;span class="k"&gt;fi&lt;/span&gt;
+&lt;span class="o"&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id="drupal-clean"&gt;drupal-clean&lt;/h3&gt;
+
+&lt;pre class="highlight shell"&gt;&lt;code&gt;&lt;span class="k"&gt;function &lt;/span&gt;drupal-clean&lt;span class="o"&gt;()&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+	&lt;span class="c"&gt;# Remove existing database&lt;/span&gt;
+	drush sql-drop -y;
+	&lt;span class="c"&gt;# Remove existing install&lt;/span&gt;
+	sudo rm -rf sites/default;
+	&lt;span class="c"&gt;# Restore the sites/default/default.settings.php file&lt;/span&gt;
+	sudo git checkout -- sites/default;
+	&lt;span class="c"&gt;# Temporarily make the sites/default writable by anyone&lt;/span&gt;
+	sudo chmod -R 777 sites/default;
+	&lt;span class="c"&gt;# Ensure the owner is the current user, not root user&lt;/span&gt;
+	sudo chown -R &lt;span class="sb"&gt;`&lt;/span&gt;whoami&lt;span class="sb"&gt;`&lt;/span&gt; sites/default;
+	&lt;span class="c"&gt;# Now that we own it and can write, change the permissions back to how drupal expects them&lt;/span&gt;
+	sudo git checkout -- sites/default;
+	&lt;span class="c"&gt;# But still ensure that we own the folder&lt;/span&gt;
+	sudo chown -R &lt;span class="sb"&gt;`&lt;/span&gt;whoami&lt;span class="sb"&gt;`&lt;/span&gt; sites/default;
+&lt;span class="o"&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id="other-things-i-learned"&gt;Other things I learned&lt;/h2&gt;
+
+&lt;p&gt;Even if you have more than two versions of PHP only two will be shown in MAMP 
+preferences. To choose a version that isn’t displayed in MAMP preferences, 
+temporarily rename or move the other versions out of the 
+&lt;code&gt;/Applications/MAMP/bin/php/&lt;/code&gt; directory.&lt;/p&gt;
+
+&lt;p&gt;I think MAMP is a great tool to start with when setting up a local development 
+environment. In the future I will be exploring setting up a &lt;a href="http://www.vagrantup.com"&gt;Vagrant&lt;/a&gt; box as 
+a local environment for Drupal, so that I can more closely approximate a 
+production environment.&lt;/p&gt;
+
+</content>
+  </entry>
+  <entry>
+    <title>Hello, world</title>
+    <link rel="alternate" href="http://alim.ac/writes/hello-world/"/>
+    <id>http://alim.ac/writes/hello-world/</id>
+    <published>2014-01-26T23:49:00+01:00</published>
+    <updated>2015-04-15T22:31:21+02:00</updated>
+    <author>
+      <name>Alina Mackenzie</name>
+    </author>
+    <content type="html">&lt;p&gt;This is my attempt at blogging with the static site generator &lt;a href="http://middleman.app"&gt;Middleman&lt;/a&gt;. 
+ 
+The inspiration for this project is Julie Pagano’s post: 
+&lt;a href="http://juliepagano.com/blog/2013/11/10/site-redesign-using-middleman/"&gt;Site Redesign Using Middleman&lt;/a&gt; which I’m using as a template and springboard 
+for:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;learning about static site generators&lt;/li&gt;
+  &lt;li&gt;learning and practicing CSS with SASS and Compass&lt;/li&gt;
+  &lt;li&gt;practicing using git&lt;/li&gt;
+  &lt;li&gt;getting more comfortable with Markdown&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I also want to document my adventures with:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Drupal&lt;/li&gt;
+  &lt;li&gt;Chef&lt;/li&gt;
+  &lt;li&gt;devops practices in general&lt;/li&gt;
+  &lt;li&gt;contributing to open source projects&lt;/li&gt;
+&lt;/ul&gt;
+
+</content>
+  </entry>
+</feed>

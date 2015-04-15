@@ -1,0 +1,14 @@
+# humanstxt.org 
+
+# TEAM 
+
+  Alina Mackenzie -- author -- @czaroxiejka
+
+# THANKS
+
+# TECHNOLOGY
+ 
+  Standards: HTML5, CSS3, Atom
+  Components: jQuery, Font Awesome
+  Software: Vim, Git, Middleman
+  Last update: 2015-04-16

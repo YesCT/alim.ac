@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+      alim.ac
+      Development environments, Drupal and Blackfire
+    </title>
+
+    <link href="../../css/normalize-ec2a8901.css" rel="stylesheet" type="text/css" />
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet" type="text/css" />
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="../../css/main-556e3750.css" rel="stylesheet" type="text/css" />
+
+    <script src="../../js/vendor/modernizr-2.6.1.min-68fdcc99.js" type="text/javascript"></script>
+  </head>
+  <body class="writes writes_development-environments-drupal-and-blackfire writes_development-environments-drupal-and-blackfire_index">
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
+        <![endif]-->
+
+    <header>
+  <nav role="navigation" class="navbar navbar-default">
+    <div class="container">
+    
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/index.html">alim.ac</a>
+      </div>
+
+      <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+  <li> <a href="../"><i class="fa fa-pencil"></i> writes</a> </li>
+  <li> <a href="../../about/"><i class="fa fa-comment"></i> about</a> </li>
+</ul>
+
+      </div>
+
+    </div>
+  </nav>
+</header>
+
+
+    <div class="container">
+        
+<div class="row">
+  <div class="col-md-9">
+    <article>
+      <h1>Development environments, Drupal and Blackfire</h1>
+      <div class="article-details">
+        <p class="lead">
+          <i class="fa fa-calendar"></i>
+          Wednesday, April 15, 2015
+        </p>
+        <div class="tags">
+            <a href="/writes/tags/blackfire/"><i class="fa fa-tag"></i> blackfire</a>
+            <a href="/writes/tags/drupal/"><i class="fa fa-tag"></i> drupal</a>
+            <a href="/writes/tags/php/"><i class="fa fa-tag"></i> php</a>
+            <a href="/writes/tags/sqlite/"><i class="fa fa-tag"></i> sqlite</a>
+            <a href="/writes/tags/vagrant/"><i class="fa fa-tag"></i> vagrant</a>
+        </div>
+      </div>
+      <p>Blackfire is a PHP performance profiler I learned about at Drupal Developer Days in Montpelliér. This post describes how I installed it to profile a Drupal 8 site.
+
+I installed Blackfire in two different environments:</p>
+
+<ul>
+  <li>local, light-weight environment (PHP 5.6, SQLite)</li>
+  <li>Drupal VM (Vagrant, VirtualBox)</li>
+</ul>
+
+<p>My motivation was to try out the Drupal VM (Ubuntu), and also try a very minimal local environment (Mac OS X), without the use of apps like MAMP or Acquia Dev Desktop.</p>
+
+<p>Don’t get me wrong, both are excellent when you are new to using local development environments. After all, I started out my Drupal adventures with MAMP. Now I was ready to try a different direction.</p>
+
+<h2 id="local-environment">Local environment</h2>
+
+<p>My local environment is Mac OS X 10.10.3. To install packages, I use <a href="http://brew.sh">Homebrew</a>, “the missing package manager for OS X”.</p>
+
+<p>If you don’t have Homebrew installed, take 2 minutes to run the <a href="http://brew.sh/#install">installation command</a> in Terminal.</p>
+
+<p>My goal was a very minimal setup:</p>
+
+<ul>
+  <li>PHP 5.6 built-in web server</li>
+  <li>SQLite as database</li>
+</ul>
+
+<p>I started out with making sure Homebrew was up to date:</p>
+
+<pre class="highlight plaintext"><code>brew doctor
+brew update
+</code></pre>
+
+<h3 id="php-56">PHP 5.6</h3>
+
+<p>Next, I visited <a href="https://github.com/Homebrew/homebrew-php">PHP formulae repo for Homebrew</a> on GitHub. I followed the <a href="https://github.com/Homebrew/homebrew-php#installation">installation instructions</a> to install PHP 5.6:</p>
+
+<pre class="highlight plaintext"><code>brew tap homebrew/dupes
+brew tap homebrew/versions
+brew tap homebrew/homebrew-php
+brew install php56
+</code></pre>
+<p>The first three commands take care of dependencies, the last installs PHP 5.6.</p>
+
+<p>To start the built-in web server, run:</p>
+
+<pre class="highlight plaintext"><code>php -S localhost:8888
+</code></pre>
+
+<p>from any directory. You should see something like:</p>
+
+<pre class="highlight plaintext"><code>PHP 5.6.7 Development Server started at Wed Apr 15 17:49:52 2015
+Listening on http://localhost:8888
+Document root is /Users/alimac/drupal
+Press Ctrl-C to quit.
+</code></pre>
+
+<p>The directory you run the command from will be treated as the root web directory.
+You can visit http://localhost:8888 to view the site. If there is no <code>index.php</code> file, you will get an error:</p>
+
+<blockquote>
+  <p><strong>Not Found</strong></p>
+
+  <p>The requested resource / was not found on this server.</p>
+</blockquote>
+
+<p>TODO: screenshot</p>
+
+<p>No worries, it means the web server is up and running.</p>
+
+<p>Restarting the web server is as easy as pressing <code>Ctrl + C</code> in the Terminal, and then running the <code>php -S localhost:8888</code> command again.</p>
+
+<h3 id="sqlite">SQLite</h3>
+
+<p>SQLite is provided with Mac OS X. The version I am using is 3.8.5.</p>
+
+<p>There is a newer version (3.8.9) available via Homebrew, but I am not going to cover upgrading SQLite. If you want to take this detour, <a href="https://github.com/Homebrew/homebrew-php/issues/702#issuecomment-23189223">this comment</a> has useful instructions.</p>
+
+<h3 id="composer">Composer</h3>
+
+<p>Composer is a dependency manager for PHP. It can manage PHP package dependencies on a <em>global</em> (user account-wide) or <em>local</em> (directory-wide) basis.</p>
+
+<p>Some packages or tools that you will be managing with composer should be installed globally. Most packages are better installed locally in a specific project directory.</p>
+
+<p>In my environment, composer itself is <a href="https://getcomposer.org/doc/00-intro.md#globally">installed globally</a>.</p>
+
+<h3 id="drush">Drush</h3>
+
+<p>Drush is a command-line shell and scripting tool for managing Drupal projects.</p>
+
+<p>The installation method I used for Drush is <a href="http://docs.drush.org/en/master/install/#composer-one-drush-for-all-projects">Composer - One Drush for all Projects</a>. Drush 7.x (dev) works with Drupal 6, 7, and 8.</p>
+
+<p>If there is a project I am working with that requires an older version of Drush, I can install it locally for that specific project.</p>
+
+<h3 id="drupal">Drupal</h3>
+
+<p>With all the tools in place, it is time to install Drupal 8!</p>
+
+<pre class="highlight plaintext"><code>git clone --branch 8.0.x http://git.drupal.org/project/drupal
+cd drupal
+</code></pre>
+
+<p>To install it in a specific directory, append a space and the directory name at the end of the <code>git</code> command.</p>
+
+<p>Next, start the built-in PHP web server and confirm you can view drupal installation page in your browser.</p>
+
+<p>I use <code>drush</code> to install and reinstall D8:</p>
+
+<pre class="highlight plaintext"><code>drush site-install -y --db-url=sqlite://Users/alimac/drupal/sites/all/files/.ht.sqlite
+</code></pre>
+
+<p>Let’s step through the parts of the <code>drush</code> command above:</p>
+
+<ol>
+  <li><a href="http://drushcommands.com/drush-7x/site-install/site-install">site-install</a> option is for installing (or reinstalling) a Drupal site</li>
+  <li><code>-y</code> option automatically answers “yes” to any <code>y/n</code> questions</li>
+  <li><code>--db-url</code> is a string whose value should be the database you want to use for your installation, in this case a SQLite file. Since it’s placed within the web root directory, it is prefixed with <code>.ht</code> which web servers like Apache should not make accessible to the world.</li>
+</ol>
+
+<blockquote>
+  <p><strong>Caveat</strong>: <a href="http://drushcommands.com/drush-7x/site-install/site-install">Drush commands documentation</a> examples use a relative path. I got an error when using relative path, and I <a href="ht.tps://github.com/drush-ops/drush/issues/1336">reported it</a> on GitHub. Using an absolute path worked for me.</p>
+</blockquote>
+
+<p>When you run the <code>drush site-install</code> command, you will see something like:</p>
+
+<pre class="highlight plaintext"><code>You are about to CREATE the '/Users/aag/drupal/d8/sites/all/files/.ht.sqlite' database. Do you want to continue? (y/n): y
+Starting Drupal installation. This takes a while. Consider using the --notify global option.                                        [ok]
+Installation complete.  User name: admin  User password: vvd6v2r756                                                                 [ok]
+Congratulations, you installed Drupal!
+</code></pre>
+
+<p>You can use the same command to reinstall Drupal. The only difference in the will be in the first line of output:</p>
+
+<pre class="highlight plaintext"><code>You are about to DROP all tables in your '/Users/aag/drupal/d8/sites/all/files/.ht.sqlite' database. Do you want to continue? (y/n): y
+</code></pre>
+
+<p>Check in your browser that your Drupal site has been installed.</p>
+
+<h3 id="blackfire">Blackfire</h3>
+
+<p>To use Blackfire, you must sign up for a free account on <a href="http://blackfire.io">blackfire.io</a>. Once you register, visit <a href="https://blackfire.io/getting-started">Getting Started with Blackfire</a> and select the Mac OS X tab.</p>
+
+<p>I recommend viewing the Getting Started doc while logged in. Why? Your server and client credentials will be inserted directly into the instructions. This makes it super easy to follow along the commands to install and configure Blackfire.</p>
+
+<p>Since the steps are fairly straightforward, I am not going to repeat them here. Once you reach the bottom of the Getting Started page, the next step is to <a href="https://blackfire.io/doc/web-page">install the browser extension</a> (Chrome-only).</p>
+
+<p>To profile Drupal 8, click on the Blackfire icon, select an empty profile slot, and click the <em>Profile!</em> button. You will see a progress bar as the site is profiled by Blackfire:</p>
+
+<p>TODO: screenshot</p>
+
+<p>When profiling is finished, click on <em>View Profile</em> button to view the full profile.</p>
+
+<h2 id="drupal-vm">Drupal VM</h2>
+
+<p>As part of my <a href="https://2014.badcamp.net/session/getting-started-vagrant">2014 talk at BADCamp</a>, I created a <a href="https://github.com/alimac/vagrant-drupal">Vagrant-based project</a> with the goal of provisioning a Drupal 8 development environment. To keep it simple, I used a shell provisioner. Since then I’ve been wanting to try more advanced provisioners like Chef or Ansible.</p>
+
+<p><a href="http://www.drupalvm.com">Drupal VM</a> is a little more than a year old, but I found out about it fairly recently. The project “aims to make spinning up a simple local Drupal test/development environment incredibly quick and easy” and uses Vagrant and Ansible.</p>
+
+<p>To get started with Drupal VM, clone the repository:</p>
+
+<pre class="highlight plaintext"><code>git clone git@github.com:geerlingguy/drupal-vm.git
+</code></pre>
+
+<p>Next, follow the <a href="https://github.com/geerlingguy/drupal-vm#quick-start-guide">Quick Start Guide</a> to install dependencies, build the virtual machine and configure your host machine to access the VM.</p>
+
+<p>What is nice about Drupal VM is that you can run <code>vagrant up</code> without configuring anything. Instead of copying the two YAML file, I just set up symbolic links:</p>
+
+<pre class="highlight plaintext"><code>ln -s example.config.yml config.yml
+ln -s example.drupal.make.yml drupal.make.yml
+</code></pre>
+
+<p>By default, Drupal web root will be in <code>~/Sites/drupalvm</code>. Whether or not you change this default location, remember to delete its contents when you destroy the VM with <code>vagrant destroy</code>. Otherwise you will get errors loading your Drupal site the next time you run <code>vagrant up</code>.</p>
+
+<p>You can map the default IP address of the VM: <code>192.168.88.88</code> to <a href="http://drupaltest.dev">drupaltest.dev</a> hostname in your <code>/etc/hosts</code> file, or access your site using the IP address: <a href="http://192.168.88.88">http://192.168.88.88</a>.</p>
+
+<p>Drupal VM comes with a lot out of the box:</p>
+
+<ul>
+  <li>Apache 2.4.x</li>
+  <li>PHP 5.5.x (configurable)</li>
+  <li>MySQL 5.5.x</li>
+  <li>Drush latest release (configurable)</li>
+  <li>Drupal 6.x, 7.x, or 8.x.x (configurable)</li>
+</ul>
+
+<p>As of this blog post, it does not come with Blackfire yet.</p>
+
+<h3 id="blackfire-1">Blackfire</h3>
+
+<p>To use Blackfire, you must sign up for a free account on <a href="http://blackfire.io">blackfire.io</a>. Once you register, visit <a href="https://blackfire.io/getting-started">Getting Started with Blackfire</a> and select the Debian Ubuntu/Mint tab.</p>
+
+<p>I recommend viewing the Getting Started doc while logged in. Why? Your server and client credentials will be inserted directly into the instructions. This makes it super easy to follow along the commands to install and configure Blackfire.</p>
+
+<p>Since the steps are fairly straightforward, I am not going to repeat them here. Once you reach the bottom of the Getting Started page, the next step is to <a href="https://blackfire.io/doc/web-page">install the browser extension</a> (Chrome-only).</p>
+
+<p>To profile Drupal 8, click on the Blackfire icon, select an empty profile slot, and click the <em>Profile!</em> button. You will see a progress bar as the site is profiled by Blackfire:</p>
+
+<p>TODO: screenshot</p>
+
+<p>When profiling is finished, click on <em>View Profile</em> button to view the full profile.</p>
+
+<p>TODO: screenshot</p>
+
+
+  </article>
+  </div>
+</div>
+
+
+    </div>
+
+    <footer>
+  <nav class="navbar navbar-default"> 
+    <div class="container">
+        <ul class="nav navbar-nav social-nav">
+  <li> <a href="https://twitter.com/czaroxiejka"><i class="fa fa-twitter"></i> twitter</a> </li>
+  <li> <a href="https://github.com/alimac"><i class="fa fa-github"></i> github</a> </li>
+  <li> <a href="../../feed.xml"><i class="fa fa-rss"></i> feed</a> </li>
+</ul>
+ 
+      </div>  
+    </div>
+  </nav>
+</footer>
+
+
+        <script src="//code.jquery.com/jquery-2.1.3.min.js" type="text/javascript"></script>
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js" type="text/javascript"></script>
+        <script src="../../js/plugins-336f429e.js" type="text/javascript"></script>
+        <script src="../../js/main-da39a3ee.js" type="text/javascript"></script>
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+          ga('create', 'UA-47875058-1', 'alim.ac');
+          ga('send', 'pageview');
+        </script>
+    </body>
+</html>

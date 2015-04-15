@@ -4,10 +4,223 @@
   <id>http://alim.ac/writes</id>
   <link href="http://alim.ac/writes"/>
   <link href="http://alim.ac/feed.xml" rel="self"/>
-  <updated>2014-02-08T18:23:00+01:00</updated>
+  <updated>2015-04-16T00:17:00+02:00</updated>
   <author>
     <name>Alina Mackenzie</name>
   </author>
+  <entry>
+    <title>Development environments, Drupal and Blackfire</title>
+    <link rel="alternate" href="http://alim.ac/writes/development-environments-drupal-and-blackfire/"/>
+    <id>http://alim.ac/writes/development-environments-drupal-and-blackfire/</id>
+    <published>2015-04-16T00:17:00+02:00</published>
+    <updated>2015-04-16T00:35:42+02:00</updated>
+    <author>
+      <name>Alina Mackenzie</name>
+    </author>
+    <content type="html">&lt;p&gt;Blackfire is a PHP performance profiler I learned about at Drupal Developer Days in Montpelliér. This post describes how I installed it to profile a Drupal 8 site.
+
+I installed Blackfire in two different environments:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;local, light-weight environment (PHP 5.6, SQLite)&lt;/li&gt;
+  &lt;li&gt;Drupal VM (Vagrant, VirtualBox)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;My motivation was to try out the Drupal VM (Ubuntu), and also try a very minimal local environment (Mac OS X), without the use of apps like MAMP or Acquia Dev Desktop.&lt;/p&gt;
+
+&lt;p&gt;Don’t get me wrong, both are excellent when you are new to using local development environments. After all, I started out my Drupal adventures with MAMP. Now I was ready to try a different direction.&lt;/p&gt;
+
+&lt;h2 id="local-environment"&gt;Local environment&lt;/h2&gt;
+
+&lt;p&gt;My local environment is Mac OS X 10.10.3. To install packages, I use &lt;a href="http://brew.sh"&gt;Homebrew&lt;/a&gt;, “the missing package manager for OS X”.&lt;/p&gt;
+
+&lt;p&gt;If you don’t have Homebrew installed, take 2 minutes to run the &lt;a href="http://brew.sh/#install"&gt;installation command&lt;/a&gt; in Terminal.&lt;/p&gt;
+
+&lt;p&gt;My goal was a very minimal setup:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;PHP 5.6 built-in web server&lt;/li&gt;
+  &lt;li&gt;SQLite as database&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I started out with making sure Homebrew was up to date:&lt;/p&gt;
+
+&lt;pre class="highlight plaintext"&gt;&lt;code&gt;brew doctor
+brew update
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id="php-56"&gt;PHP 5.6&lt;/h3&gt;
+
+&lt;p&gt;Next, I visited &lt;a href="https://github.com/Homebrew/homebrew-php"&gt;PHP formulae repo for Homebrew&lt;/a&gt; on GitHub. I followed the &lt;a href="https://github.com/Homebrew/homebrew-php#installation"&gt;installation instructions&lt;/a&gt; to install PHP 5.6:&lt;/p&gt;
+
+&lt;pre class="highlight plaintext"&gt;&lt;code&gt;brew tap homebrew/dupes
+brew tap homebrew/versions
+brew tap homebrew/homebrew-php
+brew install php56
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The first three commands take care of dependencies, the last installs PHP 5.6.&lt;/p&gt;
+
+&lt;p&gt;To start the built-in web server, run:&lt;/p&gt;
+
+&lt;pre class="highlight plaintext"&gt;&lt;code&gt;php -S localhost:8888
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;from any directory. You should see something like:&lt;/p&gt;
+
+&lt;pre class="highlight plaintext"&gt;&lt;code&gt;PHP 5.6.7 Development Server started at Wed Apr 15 17:49:52 2015
+Listening on http://localhost:8888
+Document root is /Users/alimac/drupal
+Press Ctrl-C to quit.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The directory you run the command from will be treated as the root web directory.
+You can visit http://localhost:8888 to view the site. If there is no &lt;code&gt;index.php&lt;/code&gt; file, you will get an error:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;Not Found&lt;/strong&gt;&lt;/p&gt;
+
+  &lt;p&gt;The requested resource / was not found on this server.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;TODO: screenshot&lt;/p&gt;
+
+&lt;p&gt;No worries, it means the web server is up and running.&lt;/p&gt;
+
+&lt;p&gt;Restarting the web server is as easy as pressing &lt;code&gt;Ctrl + C&lt;/code&gt; in the Terminal, and then running the &lt;code&gt;php -S localhost:8888&lt;/code&gt; command again.&lt;/p&gt;
+
+&lt;h3 id="sqlite"&gt;SQLite&lt;/h3&gt;
+
+&lt;p&gt;SQLite is provided with Mac OS X. The version I am using is 3.8.5.&lt;/p&gt;
+
+&lt;p&gt;There is a newer version (3.8.9) available via Homebrew, but I am not going to cover upgrading SQLite. If you want to take this detour, &lt;a href="https://github.com/Homebrew/homebrew-php/issues/702#issuecomment-23189223"&gt;this comment&lt;/a&gt; has useful instructions.&lt;/p&gt;
+
+&lt;h3 id="composer"&gt;Composer&lt;/h3&gt;
+
+&lt;p&gt;Composer is a dependency manager for PHP. It can manage PHP package dependencies on a &lt;em&gt;global&lt;/em&gt; (user account-wide) or &lt;em&gt;local&lt;/em&gt; (directory-wide) basis.&lt;/p&gt;
+
+&lt;p&gt;Some packages or tools that you will be managing with composer should be installed globally. Most packages are better installed locally in a specific project directory.&lt;/p&gt;
+
+&lt;p&gt;In my environment, composer itself is &lt;a href="https://getcomposer.org/doc/00-intro.md#globally"&gt;installed globally&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id="drush"&gt;Drush&lt;/h3&gt;
+
+&lt;p&gt;Drush is a command-line shell and scripting tool for managing Drupal projects.&lt;/p&gt;
+
+&lt;p&gt;The installation method I used for Drush is &lt;a href="http://docs.drush.org/en/master/install/#composer-one-drush-for-all-projects"&gt;Composer - One Drush for all Projects&lt;/a&gt;. Drush 7.x (dev) works with Drupal 6, 7, and 8.&lt;/p&gt;
+
+&lt;p&gt;If there is a project I am working with that requires an older version of Drush, I can install it locally for that specific project.&lt;/p&gt;
+
+&lt;h3 id="drupal"&gt;Drupal&lt;/h3&gt;
+
+&lt;p&gt;With all the tools in place, it is time to install Drupal 8!&lt;/p&gt;
+
+&lt;pre class="highlight plaintext"&gt;&lt;code&gt;git clone --branch 8.0.x http://git.drupal.org/project/drupal
+cd drupal
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;To install it in a specific directory, append a space and the directory name at the end of the &lt;code&gt;git&lt;/code&gt; command.&lt;/p&gt;
+
+&lt;p&gt;Next, start the built-in PHP web server and confirm you can view drupal installation page in your browser.&lt;/p&gt;
+
+&lt;p&gt;I use &lt;code&gt;drush&lt;/code&gt; to install and reinstall D8:&lt;/p&gt;
+
+&lt;pre class="highlight plaintext"&gt;&lt;code&gt;drush site-install -y --db-url=sqlite://Users/alimac/drupal/sites/all/files/.ht.sqlite
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Let’s step through the parts of the &lt;code&gt;drush&lt;/code&gt; command above:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href="http://drushcommands.com/drush-7x/site-install/site-install"&gt;site-install&lt;/a&gt; option is for installing (or reinstalling) a Drupal site&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;-y&lt;/code&gt; option automatically answers “yes” to any &lt;code&gt;y/n&lt;/code&gt; questions&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;--db-url&lt;/code&gt; is a string whose value should be the database you want to use for your installation, in this case a SQLite file. Since it’s placed within the web root directory, it is prefixed with &lt;code&gt;.ht&lt;/code&gt; which web servers like Apache should not make accessible to the world.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;Caveat&lt;/strong&gt;: &lt;a href="http://drushcommands.com/drush-7x/site-install/site-install"&gt;Drush commands documentation&lt;/a&gt; examples use a relative path. I got an error when using relative path, and I &lt;a href="ht.tps://github.com/drush-ops/drush/issues/1336"&gt;reported it&lt;/a&gt; on GitHub. Using an absolute path worked for me.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;When you run the &lt;code&gt;drush site-install&lt;/code&gt; command, you will see something like:&lt;/p&gt;
+
+&lt;pre class="highlight plaintext"&gt;&lt;code&gt;You are about to CREATE the '/Users/aag/drupal/d8/sites/all/files/.ht.sqlite' database. Do you want to continue? (y/n): y
+Starting Drupal installation. This takes a while. Consider using the --notify global option.                                        [ok]
+Installation complete.  User name: admin  User password: vvd6v2r756                                                                 [ok]
+Congratulations, you installed Drupal!
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;You can use the same command to reinstall Drupal. The only difference in the will be in the first line of output:&lt;/p&gt;
+
+&lt;pre class="highlight plaintext"&gt;&lt;code&gt;You are about to DROP all tables in your '/Users/aag/drupal/d8/sites/all/files/.ht.sqlite' database. Do you want to continue? (y/n): y
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Check in your browser that your Drupal site has been installed.&lt;/p&gt;
+
+&lt;h3 id="blackfire"&gt;Blackfire&lt;/h3&gt;
+
+&lt;p&gt;To use Blackfire, you must sign up for a free account on &lt;a href="http://blackfire.io"&gt;blackfire.io&lt;/a&gt;. Once you register, visit &lt;a href="https://blackfire.io/getting-started"&gt;Getting Started with Blackfire&lt;/a&gt; and select the Mac OS X tab.&lt;/p&gt;
+
+&lt;p&gt;I recommend viewing the Getting Started doc while logged in. Why? Your server and client credentials will be inserted directly into the instructions. This makes it super easy to follow along the commands to install and configure Blackfire.&lt;/p&gt;
+
+&lt;p&gt;Since the steps are fairly straightforward, I am not going to repeat them here. Once you reach the bottom of the Getting Started page, the next step is to &lt;a href="https://blackfire.io/doc/web-page"&gt;install the browser extension&lt;/a&gt; (Chrome-only).&lt;/p&gt;
+
+&lt;p&gt;To profile Drupal 8, click on the Blackfire icon, select an empty profile slot, and click the &lt;em&gt;Profile!&lt;/em&gt; button. You will see a progress bar as the site is profiled by Blackfire:&lt;/p&gt;
+
+&lt;p&gt;TODO: screenshot&lt;/p&gt;
+
+&lt;p&gt;When profiling is finished, click on &lt;em&gt;View Profile&lt;/em&gt; button to view the full profile.&lt;/p&gt;
+
+&lt;h2 id="drupal-vm"&gt;Drupal VM&lt;/h2&gt;
+
+&lt;p&gt;As part of my &lt;a href="https://2014.badcamp.net/session/getting-started-vagrant"&gt;2014 talk at BADCamp&lt;/a&gt;, I created a &lt;a href="https://github.com/alimac/vagrant-drupal"&gt;Vagrant-based project&lt;/a&gt; with the goal of provisioning a Drupal 8 development environment. To keep it simple, I used a shell provisioner. Since then I’ve been wanting to try more advanced provisioners like Chef or Ansible.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://www.drupalvm.com"&gt;Drupal VM&lt;/a&gt; is a little more than a year old, but I found out about it fairly recently. The project “aims to make spinning up a simple local Drupal test/development environment incredibly quick and easy” and uses Vagrant and Ansible.&lt;/p&gt;
+
+&lt;p&gt;To get started with Drupal VM, clone the repository:&lt;/p&gt;
+
+&lt;pre class="highlight plaintext"&gt;&lt;code&gt;git clone git@github.com:geerlingguy/drupal-vm.git
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Next, follow the &lt;a href="https://github.com/geerlingguy/drupal-vm#quick-start-guide"&gt;Quick Start Guide&lt;/a&gt; to install dependencies, build the virtual machine and configure your host machine to access the VM.&lt;/p&gt;
+
+&lt;p&gt;What is nice about Drupal VM is that you can run &lt;code&gt;vagrant up&lt;/code&gt; without configuring anything. Instead of copying the two YAML file, I just set up symbolic links:&lt;/p&gt;
+
+&lt;pre class="highlight plaintext"&gt;&lt;code&gt;ln -s example.config.yml config.yml
+ln -s example.drupal.make.yml drupal.make.yml
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;By default, Drupal web root will be in &lt;code&gt;~/Sites/drupalvm&lt;/code&gt;. Whether or not you change this default location, remember to delete its contents when you destroy the VM with &lt;code&gt;vagrant destroy&lt;/code&gt;. Otherwise you will get errors loading your Drupal site the next time you run &lt;code&gt;vagrant up&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;You can map the default IP address of the VM: &lt;code&gt;192.168.88.88&lt;/code&gt; to &lt;a href="http://drupaltest.dev"&gt;drupaltest.dev&lt;/a&gt; hostname in your &lt;code&gt;/etc/hosts&lt;/code&gt; file, or access your site using the IP address: &lt;a href="http://192.168.88.88"&gt;http://192.168.88.88&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Drupal VM comes with a lot out of the box:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Apache 2.4.x&lt;/li&gt;
+  &lt;li&gt;PHP 5.5.x (configurable)&lt;/li&gt;
+  &lt;li&gt;MySQL 5.5.x&lt;/li&gt;
+  &lt;li&gt;Drush latest release (configurable)&lt;/li&gt;
+  &lt;li&gt;Drupal 6.x, 7.x, or 8.x.x (configurable)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;As of this blog post, it does not come with Blackfire yet.&lt;/p&gt;
+
+&lt;h3 id="blackfire-1"&gt;Blackfire&lt;/h3&gt;
+
+&lt;p&gt;To use Blackfire, you must sign up for a free account on &lt;a href="http://blackfire.io"&gt;blackfire.io&lt;/a&gt;. Once you register, visit &lt;a href="https://blackfire.io/getting-started"&gt;Getting Started with Blackfire&lt;/a&gt; and select the Debian Ubuntu/Mint tab.&lt;/p&gt;
+
+&lt;p&gt;I recommend viewing the Getting Started doc while logged in. Why? Your server and client credentials will be inserted directly into the instructions. This makes it super easy to follow along the commands to install and configure Blackfire.&lt;/p&gt;
+
+&lt;p&gt;Since the steps are fairly straightforward, I am not going to repeat them here. Once you reach the bottom of the Getting Started page, the next step is to &lt;a href="https://blackfire.io/doc/web-page"&gt;install the browser extension&lt;/a&gt; (Chrome-only).&lt;/p&gt;
+
+&lt;p&gt;To profile Drupal 8, click on the Blackfire icon, select an empty profile slot, and click the &lt;em&gt;Profile!&lt;/em&gt; button. You will see a progress bar as the site is profiled by Blackfire:&lt;/p&gt;
+
+&lt;p&gt;TODO: screenshot&lt;/p&gt;
+
+&lt;p&gt;When profiling is finished, click on &lt;em&gt;View Profile&lt;/em&gt; button to view the full profile.&lt;/p&gt;
+
+&lt;p&gt;TODO: screenshot&lt;/p&gt;
+
+</content>
+  </entry>
   <entry>
     <title>Open Source Survival Guide with Coraline Ada Ehmke</title>
     <link rel="alternate" href="http://alim.ac/writes/open-source-survival-guide-with-coraline-ada-ehmke/"/>

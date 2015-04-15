@@ -1,0 +1,43 @@
+---
+title: /writes
+pageable: true
+per_page: 10
+---
+
+<div class="blog-header">
+  <h1 class="blog-title">writes</h1>
+  <p class="lead blog-description">
+    about
+  </p>
+</div>
+
+<div class="row">
+  <div class="col-sm-8 blog-main">
+
+<% if paginate && num_pages > 1 %>
+  <p>Page <%= page_number %> of <%= num_pages %></p>
+
+  <% if prev_page %>
+    <p><%= link_to 'Previous page', prev_page %></p>
+  <% end %>
+<% end %>
+
+<% page_articles.each_with_index do |article, i| %>
+  <h2>
+    <%= link_to article.title, article %>
+    <small><%= article.date.strftime('%b %e') %></small>
+  </h2>
+  <%= article.summary %>
+<% end %>
+
+<% if paginate %>
+  <% if next_page %>
+    <p><%= link_to 'Next page', next_page %></p>
+  <% end %>
+<% end %>
+
+  </div>
+
+  <div class="col-sm-3 col-sm-offset-1">
+  </div>
+</div>

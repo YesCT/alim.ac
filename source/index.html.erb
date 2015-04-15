@@ -1,0 +1,31 @@
+---
+---
+
+<div class="blog-header">
+  <h1 class="blog-title">Recent posts</h1>
+  <p class="lead blog-description">
+    Define recent.
+  </p>  
+</div>
+
+<div class="row">
+  <div class="col-sm-8 blog-main">
+
+<% blog.articles[0...3].each do |article| %>
+  <h2>
+    <%= link_to article.title, article %>
+    <small><%= article.date.strftime('%b %e, %Y') %></small>
+  </h2>
+  <div class="tags">
+  <% article.tags.each do |tag| %>
+    <%= link_to "<i class=\"fa fa-tag\"></i> #{tag}", tag_path(tag) %>
+  <% end %>
+  </div>
+  <%= article.summary %>
+<% end %>
+
+</div>
+
+  <div class="col-sm-3 col-sm-offset-1">
+  </div>
+</div>

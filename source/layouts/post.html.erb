@@ -1,18 +1,24 @@
 <% wrap_layout :layout do %>
-  <article>
-    <h1><%= current_article.title %></h1>
-    <div class="article-details">
-      <p class="lead">
-        <i class="fa fa-calendar"></i>
-        <%= current_article.date.strftime('%A, %B %e, %Y') %>
-      </p>
-      <div class="tags">
-        <% current_article.tags.sort.each_with_index do |tag, i| %>
-          <% last = (i == current_article.tags.size - 1) %>
-          <%= link_to "<i class=\"fa fa-tag\"></i> #{tag}", tag_path(tag) %>
-        <% end %>
+
+<div class="row">
+  <div class="col-md-9">
+    <article>
+      <h1><%= current_article.title %></h1>
+      <div class="article-details">
+        <p class="lead">
+          <i class="fa fa-calendar"></i>
+          <%= current_article.date.strftime('%A, %B %e, %Y') %>
+        </p>
+        <div class="tags">
+          <% current_article.tags.sort.each_with_index do |tag, i| %>
+            <% last = (i == current_article.tags.size - 1) %>
+            <%= link_to "<i class=\"fa fa-tag\"></i> #{tag}", tag_path(tag) %>
+          <% end %>
+        </div>
       </div>
-    </div>
-    <%= yield %>
+      <%= yield %>
   </article>
+  </div>
+</div>
+
 <% end %>

@@ -67,7 +67,7 @@ You can visit http://localhost:8888 to view the site. If there is no `index.php`
 >
 > The requested resource / was not found on this server.
 
-<img src="not-found.png" width="100%">
+<img src="/writes/2015-04-15-development-environments-drupal-and-blackfire/not-found.png" width="100%">
 
 No worries, it means the web server is up and running.
 

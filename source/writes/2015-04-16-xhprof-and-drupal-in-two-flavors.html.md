@@ -5,7 +5,7 @@ tags: drupal, xhprof, php, vagrant
 
 ---
 
-After my recent [brush with Blackfire](/writes/development-environments-drupal-and-blackfire/) at Drupal Dev Days in Montpelliér, I decided to also give another PHP profiling tool a try. 
+After my recent [brush with Blackfire](/writes/development-environments-drupal-and-blackfire/) at Drupal Dev Days in Montpelliér, I decided to also give another PHP profiling tool a try.
 READMORE
 **XHProf** is a "light-weight hierarchical and instrumentation based profiler" and the tool of choice used by sprinters in the [D8 Accelerate Performance](https://groups.drupal.org/node/464283) sprint.
 
@@ -28,7 +28,7 @@ Prerequisites:
 * Drush
 * Drupal
 
-For details about how I installed these prerequisites, check out [Development Environments, Drupal and Blackfire](http://writes/development-environments-drupal-and-blackfire/#local-environment). 
+For details about how I installed these prerequisites, check out [Development Environments, Drupal and Blackfire](http://writes/development-environments-drupal-and-blackfire/#local-environment).
 
 
 ### Install XHProf
@@ -59,7 +59,7 @@ xhprof => 0.9.2
 
 ### Configure XHProf
 
-The only configuration needed is to set the output directory in XHProf's configuration file. Here is my `/usr/local/etc/php/5.6/conf.d/ext-xhprof.ini` file:
+The only configuration needed is to set the output directory in the PHP configuration file for XHProf. Here is my `/usr/local/etc/php/5.6/conf.d/ext-xhprof.ini` file:
 
 ~~~
 [xhprof]
@@ -79,7 +79,7 @@ I installed the module with `git` using instructions from [Version Control tab](
 git clone --branch 8.x-1.x http://git.drupal.org/project/XHProf.git
 ~~~
 
-Once downloaded, visit your Drupal site and navigate to Extend to enable the XHProf module. 
+Once downloaded, visit your Drupal site and navigate to Extend to enable the XHProf module.
 
 #### Configure Drupal module
 
@@ -126,7 +126,7 @@ ln -s /usr/local/Cellar/php56-xhprof/254eb24/xhprof_html
 
 When you omit the second argument to `ln -s` the symbolic link will take the name of the inner-most directory.
 
-With the symbolic link in place, now it's time to visit: [http://localhost:8888/xhprof_html/]():
+With the symbolic link in place, now it’s time to visit: [http://localhost:8888/xhprof_html/]():
 
 TODO screenshots
 
@@ -144,11 +144,11 @@ I installed the module with `git` using instructions from [Version Control tab](
 git clone --branch 8.x-1.x http://git.drupal.org/project/XHProf.git
 ~~~
 
-Once downloaded, visit your Drupal site and navigate to Extend to enable the XHProf module. 
+Once downloaded, visit your Drupal site and navigate to Extend to enable the XHProf module.
 
 #### Configure Drupal module
 
-Visit Configuration > XHProf. Check the *Enable profiling of page views.* option. 
+Visit Configuration > XHProf. Check the *Enable profiling of page views.* option.
 
 > At this point I ran into an issue where the checkbox was disabled. I found a [workaround and reported the issue](https://github.com/geerlingguy/drupal-vm/issues/73) on GitHub. Jeff Geerling, the maintainer of Drupal VM resolved the problem within hours.
 

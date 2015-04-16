@@ -13,7 +13,7 @@
     <link rel="alternate" href="http://alim.ac/writes/development-environments-drupal-and-blackfire/"/>
     <id>http://alim.ac/writes/development-environments-drupal-and-blackfire/</id>
     <published>2015-04-16T00:17:00+02:00</published>
-    <updated>2015-04-16T11:38:51+02:00</updated>
+    <updated>2015-04-16T11:42:34+02:00</updated>
     <author>
       <name>Alina Mackenzie</name>
     </author>
@@ -82,7 +82,7 @@ You can visit http://localhost:8888 to view the site. If there is no &lt;code&gt
   &lt;p&gt;The requested resource / was not found on this server.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;&lt;img src="not-found.png" width="100%" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="/writes/2015-04-15-development-environments-drupal-and-blackfire/not-found.png" width="100%" /&gt;&lt;/p&gt;
 
 &lt;p&gt;No worries, it means the web server is up and running.&lt;/p&gt;
 

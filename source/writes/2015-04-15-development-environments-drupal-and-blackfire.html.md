@@ -67,7 +67,7 @@ You can visit http://localhost:8888 to view the site. If there is no `index.php`
 >
 > The requested resource / was not found on this server.
 
-TODO: screenshot
+<img src="not-found.png" width="100%">
 
 No worries, it means the web server is up and running.
 
@@ -198,9 +198,8 @@ Since the steps are fairly straightforward, I am not going to repeat them here. 
 
 To profile Drupal 8, click on the Blackfire icon, select an empty profile slot, and click the *Profile!* button. You will see a progress bar as the site is profiled by Blackfire:
 
-TODO: screenshot
+<img src="blackfire-profiling.png" width="100%">
 
 When profiling is finished, click on *View Profile* button to view the full profile.
 
-TODO: screenshot
-
+<img src="blackfire-profiled-drupal-site.png" width="100%">

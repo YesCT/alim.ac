@@ -2,92 +2,102 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>http://alim.ac/about/</loc>
-    <lastmod>2015-04-16T11:46:59+02:00</lastmod>
+    <lastmod>2015-04-16T23:56:34+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>http://alim.ac/writes/tags/xhprof/</loc>
+    <lastmod>2015-04-16T23:56:34+02:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>http://alim.ac/writes/tags/blackfire/</loc>
-    <lastmod>2015-04-16T11:46:59+02:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>http://alim.ac/writes/tags/sqlite/</loc>
-    <lastmod>2015-04-16T11:46:59+02:00</lastmod>
+    <lastmod>2015-04-16T23:56:34+02:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>http://alim.ac/</loc>
-    <lastmod>2015-04-16T11:46:59+02:00</lastmod>
+    <lastmod>2015-04-16T23:56:34+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>http://alim.ac/writes/tags/sqlite/</loc>
+    <lastmod>2015-04-16T23:56:34+02:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>http://alim.ac/writes/tags/vagrant/</loc>
-    <lastmod>2015-04-16T11:46:59+02:00</lastmod>
+    <lastmod>2015-04-16T23:56:34+02:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>http://alim.ac/writes/tags/php/</loc>
-    <lastmod>2015-04-16T11:46:59+02:00</lastmod>
+    <lastmod>2015-04-16T23:56:34+02:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>http://alim.ac/writes/tags/contributing/</loc>
-    <lastmod>2015-04-16T11:46:59+02:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>http://alim.ac/writes/tags/community/</loc>
-    <lastmod>2015-04-16T11:46:59+02:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>http://alim.ac/writes/tags/drupal/</loc>
-    <lastmod>2015-04-16T11:46:59+02:00</lastmod>
+    <lastmod>2015-04-16T23:56:34+02:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>http://alim.ac/projects/</loc>
-    <lastmod>2015-04-16T11:46:59+02:00</lastmod>
+    <lastmod>2015-04-16T23:56:34+02:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>http://alim.ac/writes/hello-world/</loc>
-    <lastmod>2015-04-16T11:46:59+02:00</lastmod>
+    <lastmod>2015-04-16T23:56:34+02:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>http://alim.ac/writes/global-drupal-sprint-weekend/</loc>
-    <lastmod>2015-04-16T11:46:59+02:00</lastmod>
+    <lastmod>2015-04-16T23:56:34+02:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>http://alim.ac/writes/open-source-survival-guide-with-coraline-ada-ehmke/</loc>
-    <lastmod>2015-04-16T11:46:59+02:00</lastmod>
+    <lastmod>2015-04-16T23:56:34+02:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>http://alim.ac/writes/development-environments-drupal-and-blackfire/</loc>
-    <lastmod>2015-04-16T11:46:59+02:00</lastmod>
+    <lastmod>2015-04-16T23:56:34+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>http://alim.ac/writes/xhprof-and-drupal-in-two-flavors/</loc>
+    <lastmod>2015-04-16T23:56:34+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>http://alim.ac/writes/tags/community/</loc>
+    <lastmod>2015-04-16T23:56:34+02:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>http://alim.ac/writes/</loc>
-    <lastmod>2015-04-16T11:46:59+02:00</lastmod>
+    <lastmod>2015-04-16T23:56:34+02:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>http://alim.ac/writes/tags/middleman/</loc>
-    <lastmod>2015-04-16T11:46:59+02:00</lastmod>
+    <lastmod>2015-04-16T23:56:34+02:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>http://alim.ac/writes/tags/blogging/</loc>
-    <lastmod>2015-04-16T11:46:59+02:00</lastmod>
+    <lastmod>2015-04-16T23:56:34+02:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>http://alim.ac/writes/tags/open-source/</loc>
-    <lastmod>2015-04-16T11:46:59+02:00</lastmod>
+    <lastmod>2015-04-16T23:56:34+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>http://alim.ac/writes/tags/drupal/</loc>
+    <lastmod>2015-04-16T23:56:34+02:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
 </urlset>

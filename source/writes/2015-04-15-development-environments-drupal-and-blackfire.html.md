@@ -198,8 +198,8 @@ Since the steps are fairly straightforward, I am not going to repeat them here. 
 
 To profile Drupal 8, click on the Blackfire icon, select an empty profile slot, and click the *Profile!* button. You will see a progress bar as the site is profiled by Blackfire:
 
-<img src="blackfire-profiling.png" width="100%">
+<img src="/writes/2015-04-15-development-environments-drupal-and-blackfire/blackfire-profiling.png" width="100%">
 
 When profiling is finished, click on *View Profile* button to view the full profile.
 
-<img src="blackfire-profiled-drupal-site.png" width="100%">
+<img src="/writes/2015-04-15-development-environments-drupal-and-blackfire/blackfire-profiled-drupal-site.png" width="100%">

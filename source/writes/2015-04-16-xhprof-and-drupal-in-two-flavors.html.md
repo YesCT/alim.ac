@@ -96,7 +96,7 @@ Click *Save configuration* to finish.
 
 To run an XHProf profile, visit any page of your site and scroll down to the bottom. You should see a link titled **XHProf output**. Click on the link to access the XHProf report.
 
-TODO: screenshot
+<img src="/writes/2015-04-16-xhprof-and-drupal-in-two-flavors/xhprof-module-report.png" width="100%">
 
 ### XHProf native output
 
@@ -128,7 +128,7 @@ When you omit the second argument to `ln -s` the symbolic link will take the nam
 
 With the symbolic link in place, now it’s time to visit: [http://localhost:8888/xhprof_html/]():
 
-TODO screenshots
+<img src="/writes/2015-04-16-xhprof-and-drupal-in-two-flavors/xhprof-native-output.png" width="100%">
 
 ## Drupal VM
 
@@ -165,7 +165,7 @@ Click *Save configuration* to finish.
 
 To run an XHProf profile, visit any page of your site and scroll down to the bottom. You should see a link titled **XHProf output**. Click on the link to access the XHProf report.
 
-TODO: screenshot
+<img src="/writes/2015-04-16-xhprof-and-drupal-in-two-flavors/xhprof-module-report.png" width="100%">
 
 ### XHProf native output
 
@@ -185,6 +185,6 @@ Then add the following line:
 
 Now in the browser, visit: [local.xhprof.com](http://local.xhprof.com) to view the profiling results:
 
-TODO: screenshots
+<img src="/writes/2015-04-16-xhprof-and-drupal-in-two-flavors/local-xhprof-com.png" width="100%">
 
 

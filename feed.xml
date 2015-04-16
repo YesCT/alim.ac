@@ -13,7 +13,7 @@
     <link rel="alternate" href="http://alim.ac/writes/development-environments-drupal-and-blackfire/"/>
     <id>http://alim.ac/writes/development-environments-drupal-and-blackfire/</id>
     <published>2015-04-16T00:17:00+02:00</published>
-    <updated>2015-04-16T11:42:34+02:00</updated>
+    <updated>2015-04-16T11:44:19+02:00</updated>
     <author>
       <name>Alina Mackenzie</name>
     </author>
@@ -213,11 +213,11 @@ ln -s example.drupal.make.yml drupal.make.yml
 
 &lt;p&gt;To profile Drupal 8, click on the Blackfire icon, select an empty profile slot, and click the &lt;em&gt;Profile!&lt;/em&gt; button. You will see a progress bar as the site is profiled by Blackfire:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src="blackfire-profiling.png" width="100%" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="/writes/2015-04-15-development-environments-drupal-and-blackfire/blackfire-profiling.png" width="100%" /&gt;&lt;/p&gt;
 
 &lt;p&gt;When profiling is finished, click on &lt;em&gt;View Profile&lt;/em&gt; button to view the full profile.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src="blackfire-profiled-drupal-site.png" width="100%" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="/writes/2015-04-15-development-environments-drupal-and-blackfire/blackfire-profiled-drupal-site.png" width="100%" /&gt;&lt;/p&gt;
 </content>
   </entry>
   <entry>

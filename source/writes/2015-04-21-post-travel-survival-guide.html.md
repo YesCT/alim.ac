@@ -26,7 +26,7 @@ This is probably the single most important lesson I learned, and one I sometimes
 
 When you arrive home, start the washing machine immediately and feed it all of your travel clothes. If there is no laundry on premises or you are too exhausted to stay awake, put all the clothes in a laundry hamper. Take a quick shower and change into comfortable clothes that had been waiting for your return.
 
-### Leaving unpacked luggage creates pockets of anti-time
+### Half unpacked luggage creates pockets of anti-time
 
 These pockets act as reminders of traveling days (better days) and can trigger sadness and frustration. So take clothes out and put in a laundry hamper (or do laundry right away), put books on the shelf, and magnets on the fridge as soon as possible.
 

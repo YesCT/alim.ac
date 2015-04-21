@@ -11,6 +11,7 @@ tags: travel, mental health
 > It’s good to warm my bones beside the fire.
 
 <small>Pink Floyd, [Time](https://www.youtube.com/watch?v=JwYX52BP2Sk) from *Dark Side of the Moon*</small>
+READMORE
 
 I have the means and documents to travel. Neither was always the case, so I appreciate every chance I get to take a trip. Whether it’s a one day hop on a budget airline to see loved ones, road trip or vacation, the time and cost involved make travel a privilege.
 

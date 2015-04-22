@@ -53,7 +53,7 @@ Sometimes taking a walk can act as a recharge, but in general resist the urge to
 
 This is not always feasible, but if you can budget a day before returning to work it is very helpful.
 
-Its a day to do laundry. A day to go to the store and restock groceries. A day to wake up early and drink a beer because you feel like it’s an evening somewhere else.
+It’s a day to do laundry. A day to go to the store and restock groceries. A day to wake up early and drink a beer because you feel like it’s an evening somewhere else.
 
 ## Keep engaging
 

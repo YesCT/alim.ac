@@ -17,6 +17,7 @@ I have the means and documents to travel. Neither was always the case, so I appr
 
 Travel is exhilarating, exciting, and exhausting. Over time I learned some important lessons in dealing with post-travel returns.
 
+<img src="/writes/2015-04-21-post-travel-survival-guide/chicago-now-boarding.jpg" width="100%">
 
 ## Leave no trace
 

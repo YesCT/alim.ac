@@ -67,7 +67,7 @@ Keep in touch with community and friends. Being engaged online at a comfortable 
 
 In addition to the "low battery indicator", there are other signals worth paying attention to in post-travel. Are there new patterns in your everyday activity? New patterns aren’t necessarily bad. They can be habits I learned about from others.
 
-But they can also be warning signs. Pay attention to them, and yourself. Ask,
+But they can also be warning signs. Pay attention to them. Ask,
 
 > Why am I having such a hard time with...?
 

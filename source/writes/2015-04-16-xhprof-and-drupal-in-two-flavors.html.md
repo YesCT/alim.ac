@@ -11,7 +11,7 @@ READMORE
 
 ## Environments
 
-In [Development Environments, Drupal and Blackfire](http://writes/development-environments-drupal-and-blackfire/) I described in detail the two environments I have been using:
+In [Development Environments, Drupal and Blackfire](/writes/development-environments-drupal-and-blackfire/) I described in detail the two environments I have been using:
 
 1. **lightweight, local environment**: Mac OS X, PHP 5.6 and its built-in web server, SQLite
 2. **isolated, virtual environment**: Vagrant-based [Drupal VM](http://drupalvm.com) (Ubuntu, PHP 5.5, Apache, MySQL) running on VirtualBox
@@ -28,7 +28,7 @@ Prerequisites:
 * Drush
 * Drupal
 
-For details about how I installed these prerequisites, check out [Development Environments, Drupal and Blackfire](http://writes/development-environments-drupal-and-blackfire/#local-environment).
+For details about how I installed these prerequisites, check out [Development Environments, Drupal and Blackfire](/writes/development-environments-drupal-and-blackfire/#local-environment).
 
 
 ### Install XHProf

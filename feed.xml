@@ -95,7 +95,7 @@ It’s good to warm my bones beside the fire.&lt;/p&gt;
     <link rel="alternate" href="http://alim.ac/writes/xhprof-and-drupal-in-two-flavors/"/>
     <id>http://alim.ac/writes/xhprof-and-drupal-in-two-flavors/</id>
     <published>2015-04-16T05:03:00-05:00</published>
-    <updated>2015-04-16T16:54:06-05:00</updated>
+    <updated>2015-04-22T23:00:56-05:00</updated>
     <author>
       <name>Alina Mackenzie</name>
     </author>
@@ -105,7 +105,7 @@ It’s good to warm my bones beside the fire.&lt;/p&gt;
 
 &lt;h2 id="environments"&gt;Environments&lt;/h2&gt;
 
-&lt;p&gt;In &lt;a href="http://writes/development-environments-drupal-and-blackfire/"&gt;Development Environments, Drupal and Blackfire&lt;/a&gt; I described in detail the two environments I have been using:&lt;/p&gt;
+&lt;p&gt;In &lt;a href="/writes/development-environments-drupal-and-blackfire/"&gt;Development Environments, Drupal and Blackfire&lt;/a&gt; I described in detail the two environments I have been using:&lt;/p&gt;
 
 &lt;ol&gt;
   &lt;li&gt;&lt;strong&gt;lightweight, local environment&lt;/strong&gt;: Mac OS X, PHP 5.6 and its built-in web server, SQLite&lt;/li&gt;
@@ -126,7 +126,7 @@ It’s good to warm my bones beside the fire.&lt;/p&gt;
   &lt;li&gt;Drupal&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;For details about how I installed these prerequisites, check out &lt;a href="http://writes/development-environments-drupal-and-blackfire/#local-environment"&gt;Development Environments, Drupal and Blackfire&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;For details about how I installed these prerequisites, check out &lt;a href="/writes/development-environments-drupal-and-blackfire/#local-environment"&gt;Development Environments, Drupal and Blackfire&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h3 id="install-xhprof"&gt;Install XHProf&lt;/h3&gt;
 
